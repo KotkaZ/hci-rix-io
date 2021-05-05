@@ -1,0 +1,20 @@
+
+div.message.end-type{
+    text-align: right;
+}
+
+div.message.start-type{
+    text-align: left;
+}
+
+div.message-box {
+    border-radius: 25px;
+}
+
+div.message.end-type div.message-box{
+    background-color: darkcyan;
+}
+
+div.message.start-type div.message-box{
+    background-color: aquamarine;
+}
