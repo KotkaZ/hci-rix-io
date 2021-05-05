@@ -1,29 +1,26 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "primereact/resources/themes/saga-blue/theme.css";
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
-import "primeflex/primeflex.css";
+import './App.css';
+import {InputText} from 'primereact/inputtext';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="p-grid nested-grid p-jc-center vertical-container p-ai-center centerbox">
+                <div className="p-grid p-jc-center p-shadow-10 p-p-3">
+                    <InputText className="p-col-8 p-mb-3"/>
+                    <InputText className="p-col-8"/>
+
+                    <span className="p-input-icon-left p-col-8">
+                        <i className="pi pi-search"/>
+                        <InputText placeholder="Search"/>
+                    </span>
+                </div>
+
+
+
+            </div>
+        </div>
+    );
 }
 
 export default App;
