@@ -1,11 +1,12 @@
 import "./App.css";
-import Nav from "./components/nav/Nav";
-import Threadheader from "./components/threadheader/Threadheader";
+import Nav from "./components/nav/nav";
+import Threadheader from "./components/threadheader/threadheader";
 
 function App() {
-  return (
-    <div className="App">
-      <Nav />
+  const items = [];
+
+  for (let index = 0; index < 10; index++) {
+    items.push(
       <Threadheader
         title="Learning React the Hard Way"
         author="KotkaZ"
@@ -14,6 +15,13 @@ function App() {
         lastpost="April 4, 2021, 15:35:10"
         lastposter="Baranka"
       />
+    );
+  }
+
+  return (
+    <div className="App">
+      <Nav />
+      {items}
     </div>
   );
 }
