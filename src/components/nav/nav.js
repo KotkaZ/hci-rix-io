@@ -1,8 +1,8 @@
 import "./nav.css";
 import React, { Component } from "react";
 import { InputText } from "primereact/inputtext";
-import Userpopup from "../userpopup/Userpopup";
-import Burger from "../burger/Burger";
+import Userpopup from "../userpopup/userpopup";
+import Burger from "../burger/burger";
 import { BreadCrumb } from "primereact/breadcrumb";
 
 export default class Nav extends Component {
