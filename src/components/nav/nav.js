@@ -1,4 +1,4 @@
-import "./Nav.css";
+import "./nav.css";
 import React, { Component } from "react";
 import { InputText } from "primereact/inputtext";
 import Userpopup from "../userpopup/Userpopup";
