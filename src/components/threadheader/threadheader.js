@@ -1,4 +1,4 @@
-import "./Threadheader.css";
+import "./threadheader.css";
 import React, { Component } from "react";
 
 export default class Threadheader extends Component {
