@@ -1,4 +1,4 @@
-import "./Userpopup.css";
+import "./userpopup.css";
 import { Menu } from "primereact/menu";
 import { InputSwitch } from "primereact/inputswitch";
 import React, { Component } from "react";
