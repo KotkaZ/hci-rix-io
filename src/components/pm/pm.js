@@ -1,7 +1,7 @@
 import "./pm.css";
 import React from "react";
 
-// <Pm text="Hello World!" time="15:15" date="12/12/12" type="start"/>
+// <Pm text="Hello World!" time="15:15" date="12/12/12" type="{start|end}"/>
 function Pm(props) {
     return (
         <div className="Pm">
