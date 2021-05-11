@@ -11,8 +11,6 @@ export default class ThreadCreation extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked1: false,
-            checked2: true,
             selectedSubforum: null
         };
 
