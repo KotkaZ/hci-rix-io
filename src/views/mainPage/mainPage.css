@@ -1,0 +1,8 @@
+.centerbox {
+    height: 100vh;
+}
+
+body {
+    background-color: var(--surface-c);
+    color: var(--text-color);
+}

@@ -3,6 +3,7 @@ import { Menu } from "primereact/menu";
 import { InputSwitch } from "primereact/inputswitch";
 import React, { Component } from "react";
 import { Avatar } from "primereact/avatar";
+import {Link} from "react-router-dom";
 
 export default class Userpopup extends Component {
   constructor(props) {
@@ -36,7 +37,7 @@ export default class Userpopup extends Component {
             icon: "pi pi-moon",
           },
           {
-            label: "Settings",
+            label: <Link to="/userSettings">Settings</Link>,
             icon: "pi pi-cog",
           },
           {
