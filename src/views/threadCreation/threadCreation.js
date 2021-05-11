@@ -35,16 +35,16 @@ export default class ThreadCreation extends Component {
     render() {
         return (
             <div className="ThreadCreation p-grid p-nogutter p-ml-4">
-                <div className="SubjectBox p-col-12">
+                <div className="p-col-12">
                     <h3>Subject </h3>
                     <InputText id="threadName" className="p-col-11"/>
                 </div>
                 <div className="TextEditorBox p-col-11 p-mt-6">
-                    <div className="Subjecttext p-col-1">
+                    <div className="p-col-1">
                         <h3>Text </h3>
                     </div>
                     <Editor style={{height: '320px'}} className="p-mb-6"/>
-                    <h3 className="Subjecttext">Tags</h3>
+                    <h3>Tags</h3>
                     <div className="bottomBox">
                         <Chips id="tags" value={this.state.values1} onChange={(e) => this.setState({values1: e.value})}
                                className="p-mb-6" separator=","/>
