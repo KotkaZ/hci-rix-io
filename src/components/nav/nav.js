@@ -44,7 +44,7 @@ export default class Nav extends Component {
 
     return (
       <div className="Nav ">
-        <div className="p-grid p-jc-between nested-grid p-p-2 p-shadow-10">
+        <div className="p-grid p-jc-between nested-grid p-p-2 p-shadow-10 p-nogutter">
           <div className="p-col-2 p-jc-start">
             <Burger />
           </div>

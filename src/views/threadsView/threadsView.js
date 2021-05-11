@@ -28,8 +28,8 @@ function ThreadsView() {
   };
 
   return (
-    <div className="ThreadsView p-grid nested-grid p-jc-center">
-      <div className="p-pt-3 p-pb-3 p-grid p-jc-center">
+    <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
+      <div className="p-pt-3 p-pb-3 p-grid p-jc-center p-nogutter">
         {items.slice(basicFirst, basicFirst + basicRows)}
       </div>
       <Paginator
