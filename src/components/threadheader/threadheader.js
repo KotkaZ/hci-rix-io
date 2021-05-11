@@ -1,6 +1,5 @@
 import "./threadheader.css";
 import React, { Component } from "react";
-import { Divider } from "primereact/divider";
 
 export default class Threadheader extends Component {
   constructor(props) {
