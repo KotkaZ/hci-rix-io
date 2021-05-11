@@ -44,12 +44,12 @@ export default class Nav extends Component {
 
     return (
       <div className="Nav ">
-        <div className="p-grid p-jc-between nested-grid p-p-2 p-shadow-10 p-nogutter">
+        <div className="p-grid p-jc-between nested-grid p-p-2 p-nogutter p-align-center">
           <div className="p-col-2 p-jc-start">
             <Burger />
           </div>
 
-          <div className="p-col-4 p-fluid ">
+          <div className="p-col-4 p-fluid">
             <span className="p-input-icon-left p-field">
               <i className="pi pi-search" />
               <InputText placeholder="Search" />
@@ -64,7 +64,7 @@ export default class Nav extends Component {
           </div>
         </div>
 
-        <div className="card">
+        <div className="card p-shadow-10">
           <BreadCrumb model={items} home={home} />
         </div>
       </div>
