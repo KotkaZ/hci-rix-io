@@ -4,8 +4,7 @@ import {InputText} from 'primereact/inputtext';
 import {Editor} from 'primereact/editor';
 import {Button} from 'primereact/button';
 import {Chips} from 'primereact/chips';
-import { Dropdown } from 'primereact/dropdown';
-
+import {Dropdown} from 'primereact/dropdown';
 
 
 export default class ThreadCreation extends Component {
@@ -18,10 +17,10 @@ export default class ThreadCreation extends Component {
         };
 
         this.subforums = [
-            { name: 'Software development', code: 'SD' },
-            { name: 'Hardware', code: 'HD' },
-            { name: 'Market', code: 'MK' },
-            { name: 'Jobs / Career', code: 'JC' },
+            {name: 'Software development', code: 'SD'},
+            {name: 'Hardware', code: 'HD'},
+            {name: 'Market', code: 'MK'},
+            {name: 'Jobs / Career', code: 'JC'},
         ];
 
         this.onSubforumChange = this.onSubforumChange.bind(this);
@@ -29,7 +28,7 @@ export default class ThreadCreation extends Component {
     }
 
     onSubforumChange(e) {
-        this.setState({ selectedSubforum: e.value });
+        this.setState({selectedSubforum: e.value});
     }
 
     render() {
@@ -43,13 +42,14 @@ export default class ThreadCreation extends Component {
                     <div className="p-col-1">
                         <h3>Text </h3>
                     </div>
-                    <Editor style={{height: '320px'}} className="p-mb-6"/>
+                    <Editor style={{height: '320px'}} className="p-mb-3"/>
                     <h3>Tags</h3>
-                    <div className="bottomBox">
-                        <Chips id="tags" value={this.state.values1} onChange={(e) => this.setState({values1: e.value})}
-                               className="p-mb-6" separator=","/>
-                        <Dropdown optionLabel="name" value={this.state.selectedSubforum} options={this.subforums} onChange={this.onSubforumChange} placeholder="Select a subforum"/>
-                    </div>
+                    <Chips id="tags" value={this.state.values1} onChange={(e) => this.setState({values1: e.value})}
+                           className="p-mb-3" separator=","/>
+
+                    <h3>Subforum</h3>
+                    <Dropdown optionLabel="name" value={this.state.selectedSubforum} options={this.subforums}
+                              onChange={this.onSubforumChange} placeholder="Select a subforum" className="p-mb-3"/>
                     <div>
                         <Button label="Submit" loadingOptions={{position: 'right'}}/>
                     </div>
