@@ -3,14 +3,12 @@ import { Menu } from "primereact/menu";
 import { InputSwitch } from "primereact/inputswitch";
 import React, { Component } from "react";
 import { Avatar } from "primereact/avatar";
-import {Link} from "react-router-dom";
 
 export default class Userpopup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked1: true,
-      checked2: false,
+      darkMode: false,
     };
     this.items = [
       {
@@ -29,16 +27,18 @@ export default class Userpopup extends Component {
               <div>
                 <span>Dark Mode </span>
                 <InputSwitch
-                  checked={this.state.checked1}
-                  onChange={e => this.setState({ checked1: e.value })}
-                />{" "}
+                  checked={this.state.darkMode}
+                  onChange={(e) => this.setState({darkMode: e.target.value})}
+                  //onChange={(e) => console.log(e.target.value )}
+                />
               </div>
             ),
             icon: "pi pi-moon",
           },
           {
-            label: <Link to="/userSettings">Settings</Link>,
+            label: "Settings",
             icon: "pi pi-cog",
+            url: '/userSettings'
           },
           {
             label: "Log Out",
