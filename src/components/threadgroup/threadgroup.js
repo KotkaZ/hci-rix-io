@@ -1,21 +1,15 @@
 import "./threadgroup.css";
 import React, { Component } from "react";
+import { Card } from "primereact/card";
 
 export default class Threadgroup extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked1: false,
-      checked2: true,
-    };
-  }
+  header = (
+    <span>
+      <h3 className="p-pl-4 p-pt-3 p-pb-0 p-m-0">{this.props.title}</h3>
+    </span>
+  );
 
   render() {
-    return (
-      <div className="Threadgroup p-col-12 p-md-8 p-grid p-nogutter">
-        <h3>{this.props.title}</h3>
-        <div>{this.props.threads}</div>
-      </div>
-    );
+    return <Card header={this.header}>{this.props.threads}</Card>;
   }
 }
