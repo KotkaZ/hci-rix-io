@@ -17,10 +17,12 @@ export default class Userpopup extends Component {
           {
             label: "Profile",
             icon: "pi pi-users",
+            url: '/userProfile'
           },
           {
             label: "Direct Messages",
             icon: "pi pi-comments",
+            url: '/userMessages'
           },
           {
             label: (
@@ -46,7 +48,20 @@ export default class Userpopup extends Component {
             command: () => {
               console.log("Logout would happen!");
             },
+            url: '/userLogout'
           },
+          {
+            label: "SingleThreadView",
+            url: '/singleThreadView'
+          },
+          {
+            label: "ThreadCreation",
+            url: '/threadCreation'
+          },
+          {
+            label: "ThreadsView",
+            url: '/threadsView'
+          }
         ],
       },
     ];
@@ -57,8 +72,7 @@ export default class Userpopup extends Component {
       <div className="UserPopup">
         <Avatar
           shape="circle"
-          size="xlarge"
-          className="p-mr-2"
+          size="large"
           image="https://i.guim.co.uk/img/media/976161556e63867b492868c15e86ea71b4165c52/0_165_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=b4e203c07941288dab171a18905ad374"
           onClick={event => this.menu.toggle(event)}
           aria-controls="popup_menu"
