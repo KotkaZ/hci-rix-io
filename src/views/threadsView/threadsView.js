@@ -1,10 +1,12 @@
+import { Paginator } from "primereact/paginator";
+import React, { useState } from "react";
+
 import "./threadsView.css";
 import Threadheader from "../../components/threadheader/threadheader";
 
 function ThreadsView() {
   const items = [];
-
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 25; index++) {
     items.push(
       <Threadheader
         title="Learning React the Hard Way"
@@ -17,9 +19,27 @@ function ThreadsView() {
     );
   }
 
+  const [basicFirst, setBasicFirst] = useState(0);
+  const [basicRows, setBasicRows] = useState(10);
+
+  const onBasicPageChange = event => {
+    setBasicFirst(event.first);
+    setBasicRows(event.rows);
+  };
+
   return (
-    <div className="ThreadsView">
-      <div className="p-mt-2 p-grid p-jc-center">{items}</div>
+    <div className="ThreadsView p-grid nested-grid p-jc-center">
+      <div className="p-pt-3 p-pb-3 p-grid p-jc-center">
+        {items.slice(basicFirst, basicFirst + basicRows)}
+      </div>
+      <Paginator
+        className="p-col-12 p-md-8 p-mb-0 p-mt-auto"
+        first={basicFirst}
+        rows={basicRows}
+        totalRecords={items.length}
+        rowsPerPageOptions={[10, 20, 30]}
+        onPageChange={onBasicPageChange}
+      ></Paginator>
     </div>
   );
 }
