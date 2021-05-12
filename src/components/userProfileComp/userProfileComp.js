@@ -91,10 +91,9 @@ export default class UserProfileComp extends Component {
         return (
 
             <div className="UserProfileComp">
+                <div className="p-grid p-jc-center">
 
-                <div className="p-grid p-justify-center">
-
-                    <div className="p-col-12 p-md-6 p-lg-3">
+                    <div className="p-col-10">
                         <div className="p-grid p-justify-center">
                             <Avatar
                                 image="https://i.guim.co.uk/img/media/976161556e63867b492868c15e86ea71b4165c52/0_165_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=b4e203c07941288dab171a18905ad374"
