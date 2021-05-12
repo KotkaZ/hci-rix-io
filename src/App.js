@@ -16,19 +16,27 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Switch>
-        <Route path="/" component={MainPage} exact />
-        <Route path="/userSettings" component={UserSettings} exact />
-        <Route path="/userMessages" component={Pms} exact />
-        <Route path="/singleThreadView" component={SingleThreadView} exact />
-        <Route path="/threadCreation" component={ThreadCreation} exact />
-        <Route path="/trending" component={Trending} exact />
-        <Route path="/jobs" component={Jobs} exact />
-        <Route path="/software" component={Software} exact />
-        <Route path="/hardware" component={Hardware} exact />
-        <Route path="/market" component={Market} exact />
-        <Route component={Error} />
-      </Switch>
+      <div className="p-grid p-jc-center p-nogutter">
+        <div className="p-col-12 p-md-8 content p-shadow-5">
+          <Switch>
+            <Route path="/" component={MainPage} exact />
+            <Route path="/userSettings" component={UserSettings} exact />
+            <Route path="/userMessages" component={Pms} exact />
+            <Route
+              path="/singleThreadView"
+              component={SingleThreadView}
+              exact
+            />
+            <Route path="/threadCreation" component={ThreadCreation} exact />
+            <Route path="/trending" component={Trending} exact />
+            <Route path="/jobs" component={Jobs} exact />
+            <Route path="/software" component={Software} exact />
+            <Route path="/hardware" component={Hardware} exact />
+            <Route path="/market" component={Market} exact />
+            <Route component={Error} />
+          </Switch>
+        </div>
+      </div>
     </div>
   );
 }
