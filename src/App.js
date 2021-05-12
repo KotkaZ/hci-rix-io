@@ -6,12 +6,14 @@ import UserSettings from "./views/userSettings/userSettings";
 import Pms from "./views/pms/pms";
 import SingleThreadView from "./views/singleThreadView/singleThreadView";
 import ThreadCreation from "./views/threadCreation/threadCreation";
+import ListPmsView from "./views/listPmsView/listPmsView";
 
 import Trending from "./views/subforums/trending";
 import Jobs from "./views/subforums/jobs";
 import Software from "./views/subforums/software";
 import Hardware from "./views/subforums/hardware";
 import Market from "./views/subforums/market";
+
 function App() {
   return (
     <div className="App">
@@ -21,7 +23,9 @@ function App() {
           <Switch>
             <Route path="/" component={MainPage} exact />
             <Route path="/userSettings" component={UserSettings} exact />
-            <Route path="/userMessages" component={Pms} exact />
+            <Route path="/userMessages" component={ListPmsView} exact />
+            <Route path="/Unga_Punga" component={Pms} exact />
+
             <Route
               path="/singleThreadView"
               component={SingleThreadView}
