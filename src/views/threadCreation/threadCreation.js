@@ -4,28 +4,100 @@ import { InputText } from "primereact/inputtext";
 import { Editor } from "primereact/editor";
 import { Button } from "primereact/button";
 import { Chips } from "primereact/chips";
-import { Dropdown } from "primereact/dropdown";
+import { TreeSelect } from 'primereact/treeselect';
+
 
 export default class ThreadCreation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedSubforum: null,
+      nodes: null,
+      selectedNodeKey1: null,
     };
+    this.data = [
+        {
+          key: "0",
+          label: "Software Development",
+          icon: "pi pi-desktop",
+          children: [{
+            key: "0-0",
+            label: "placeholder",
+            children: [
+              { key: "0-0-0",
+                label: "placeholder",
+              },
+              { key: "0-0-1",
+                label: "placeholder",
+              }]
+          },
+            {
+              key: "0-1",
+              label: "placeholder",
+              children: [
+                  { key: "0-1-0",
+                    label: "placeholder",
+                  }]
+            }]
+        },
+        {
+          key: "1",
+          label: "Hardware",
+          icon: "pi pi-cog",
+          children: [
+            { key: "1-0",
+              label: "placeholder",
+            },
+            { key: "1-1",
+              label: "placeholder",
+            },
+            { key: "1-2",
+              label: "placeholder",
+            }]
+        },
+        {
+          key: "2",
+          label: "Market",
+          icon: "pi pi-money-bill",
+          children: [{
+            key: "2-0",
+            label: "placeholder",
+            children: [
+              { key: "2-0-0",
+                label: "placeholder",
+              },
+              { key: "2-0-1",
+                label: "placeholder",
+              }]
+          },
+            {
+              key: "2-1",
+              label: "placeholder",
+              children: [
+                { key: "2-1-0",
+                  label: "placeholder",
+                },
+                { key: "2-1-1",
+                  label: "placeholder",
+                }]
+            }]
+        },
+      {
+        key: "3",
+        label: "Jobs / Career",
+        icon: "pi pi-briefcase",
+        children: [
+            { key: "3-1-0",
+              label: "placeholder"
+            },
+            { key: "3-1-1",
+              label: "placeholder"
+            }]
+      }
+      ]
+    }
 
-    this.subforums = [
-      { name: "Software development", code: "SD" },
-      { name: "Hardware", code: "HD" },
-      { name: "Market", code: "MK" },
-      { name: "Jobs / Career", code: "JC" },
-    ];
 
-    this.onSubforumChange = this.onSubforumChange.bind(this);
-  }
 
-  onSubforumChange(e) {
-    this.setState({ selectedSubforum: e.value });
-  }
 
   render() {
     return (
@@ -50,14 +122,13 @@ export default class ThreadCreation extends Component {
           />
 
           <h3>Subforum</h3>
-          <Dropdown
-            optionLabel="name"
-            value={this.state.selectedSubforum}
-            options={this.subforums}
-            onChange={this.onSubforumChange}
-            placeholder="Select a subforum"
-            className="p-mb-3"
-          />
+          <TreeSelect
+              value={this.state.selectedNodeKey1}
+              options={this.data}
+              onChange={(e) => this.setState({ selectedNodeKey1: e.value })}
+              filter
+              placeholder="Select Location"></TreeSelect>
+
           <div>
             <Button label="Submit" loadingOptions={{ position: "right" }} />
           </div>

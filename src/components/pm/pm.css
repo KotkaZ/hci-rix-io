@@ -1,3 +1,6 @@
+.Pm {
+    color: var(--text-color);
+}
 
 div.message.end-type{
     text-align: right;
@@ -12,9 +15,9 @@ div.message-box {
 }
 
 div.message.end-type div.message-box{
-    background-color: darkcyan;
+    background-color: var(--surface-f);
 }
 
 div.message.start-type div.message-box{
-    background-color: aquamarine;
+    background-color: var(--surface-c);
 }

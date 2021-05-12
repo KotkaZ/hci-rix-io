@@ -2,7 +2,6 @@ import "./singleThreadView.css";
 import React, {Component} from "react";
 import {Avatar} from 'primereact/avatar';
 import {Card} from 'primereact/card';
-import {PrimeIcons} from 'primereact/api';
 
 
 export default class SingleThreadView extends Component {
