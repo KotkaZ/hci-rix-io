@@ -1,0 +1,48 @@
+.Siderbar {
+  left: 0;
+  margin-top: 5px;
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+  z-index: 1;
+
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+
+  background-color: var(--surface-a);
+}
+
+h3 {
+  cursor: pointer;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.open {
+  -webkit-transform: translate3d(0%, 0px, 0px);
+  -moz-transform: translate3d(0%, 0px, 0px);
+  -ms-transform: translate3d(0%, 0px, 0px);
+  -o-transform: translate3d(0%, 0px, 0px);
+  transform: translate3d(0%, 0px, 0px);
+}
+
+.close {
+  -webkit-transform: translate3d(-100%, 0px, 0px);
+  -moz-transform: translate3d(-100%, 0px, 0px);
+  -ms-transform: translate3d(-100%, 0px, 0px);
+  -o-transform: translate3d(-100%, 0px, 0px);
+  transform: translate3d(-100%, 0px, 0px);
+}
+
+@media only screen and (max-width: 600px) {
+  .Siderbar {
+    width: 100%;
+    text-align: center;
+  }
+}

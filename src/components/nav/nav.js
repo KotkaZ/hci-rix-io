@@ -6,30 +6,6 @@ import Burger from "../burger/burger";
 import { BreadCrumb } from "primereact/breadcrumb";
 
 export default class Nav extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked1: false,
-      checked2: true,
-    };
-  }
-
-  items = [
-    { label: "Categories" },
-    { label: "Sports" },
-    { label: "Football" },
-    { label: "Countries" },
-    { label: "Spain" },
-    { label: "F.C. Barcelona" },
-    { label: "Squad" },
-    {
-      label: "Lionel Messi",
-      url: "https://en.wikipedia.org/wiki/Lionel_Messi",
-    },
-  ];
-
-  home = { icon: "pi pi-home", url: "https://www.primefaces.org/primereact" };
-
   render() {
     const items = [
       { label: "Jobs/career" },
@@ -64,7 +40,7 @@ export default class Nav extends Component {
           </div>
         </div>
 
-        <div className="card p-shadow-10">
+        <div className="card p-shadow-3">
           <BreadCrumb model={items} home={home} />
         </div>
       </div>
