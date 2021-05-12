@@ -19,6 +19,11 @@ h3 {
   cursor: pointer;
 }
 
+.link {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .open {
   -webkit-transform: translate3d(0%, 0px, 0px);
   -moz-transform: translate3d(0%, 0px, 0px);

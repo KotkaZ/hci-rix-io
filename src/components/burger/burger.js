@@ -1,6 +1,7 @@
 import "./burger.css";
 import React, { Component } from "react";
 import { Button } from "primereact/button";
+import { Link } from "react-router-dom";
 
 export default class Burger extends Component {
   constructor(props) {
@@ -21,11 +22,22 @@ export default class Burger extends Component {
           }}
         />
         <div className={`Siderbar ${this.state.checked ? "open" : "close"}`}>
-          <h3 className="p-m-4 p-pb-4"> Trending </h3>
-          <h3 className="p-m-4"> Software development </h3>
-          <h3 className="p-m-4"> Hardware </h3>
-          <h3 className="p-m-4"> Market </h3>
-          <h3 className="p-m-4"> Jobs / Career </h3>
+          <Link className="link" to="/trending">
+            <h3 className="p-m-4 p-pb-4"> Trending</h3>
+          </Link>
+
+          <Link className="link" to="/software">
+            <h3 className="p-m-4"> Software development </h3>
+          </Link>
+          <Link className="link" to="/hardware">
+            <h3 className="p-m-4"> Hardware </h3>
+          </Link>
+          <Link className="link" to="/market">
+            <h3 className="p-m-4"> Market </h3>
+          </Link>
+          <Link className="link" to="/jobs">
+            <h3 className="p-m-4"> Jobs / Career </h3>
+          </Link>
         </div>
       </div>
     );
