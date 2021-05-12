@@ -9,7 +9,7 @@ export default class Pms extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: 'qwer',
+            value: '',
             chatPartner: {
                     imgSrc: "https://i.redd.it/v0caqchbtn741.jpg",
                     name:"Unga Punga",
@@ -20,13 +20,13 @@ export default class Pms extends Component {
         return (
             <div className="Pm">
                 <div className="chat-header p-d-block p-p-2 p-d-flex p-ai-center"  style={{fontSize:30, verticalAlign: 'center', position:'sticky', top:0,}}>
-                    <Button className="p-button-lg p-m-2" icon="pi pi-chevron-left"/>
+                    {/*<Button className="p-button-lg p-m-2" icon="pi pi-chevron-left"/>*/}
                     <Avatar className="p-m-2" image={this.state.chatPartner.imgSrc} shape="circle" size="large"/>
                     {this.state.chatPartner.name}
                 </div>
                 <div className="messages-box p-d-block p-fluid">
                     <div className="person-profile p-d-block p-text-center p-m-2" style={{fontSize:30}}>
-                        <img className="p-d-block p-ml-auto p-mr-auto p-shadow-10" src={this.state.chatPartner.imgSrc} style={{width:'30%', height:"auto", borderRadius:"50%"}} alt="profile"/>
+                        <img className="p-d-block p-ml-auto p-mr-auto p-shadow-10" src={this.state.chatPartner.imgSrc} style={{width:'30%', maxWidth:'400px', height:"auto", borderRadius:"50%"}} alt="profile"/>
                         {this.state.chatPartner.name}
                     </div>
                     <div className="messages p-d-block">

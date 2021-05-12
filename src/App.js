@@ -12,6 +12,7 @@ import Jobs from "./views/subforums/jobs";
 import Software from "./views/subforums/software";
 import Hardware from "./views/subforums/hardware";
 import Market from "./views/subforums/market";
+import ListPmsView from "./views/listPmsView/listPmsView";
 function App() {
   return (
     <div className="App">
@@ -19,7 +20,8 @@ function App() {
       <Switch>
         <Route path="/" component={MainPage} exact />
         <Route path="/userSettings" component={UserSettings} exact />
-        <Route path="/userMessages" component={Pms} exact />
+        <Route path="/userMessages" component={ListPmsView} exact />
+        <Route path="/Unga_Punga" component={Pms} exact />
         <Route path="/singleThreadView" component={SingleThreadView} exact />
         <Route path="/threadCreation" component={ThreadCreation} exact />
         <Route path="/trending" component={Trending} exact />
