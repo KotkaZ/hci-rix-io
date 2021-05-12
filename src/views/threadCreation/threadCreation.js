@@ -20,25 +20,11 @@ export default class ThreadCreation extends Component {
                 icon: "pi pi-desktop",
                 children: [{
                     key: "0-0",
-                    label: "placeholder",
-                    children: [
-                        {
-                            key: "0-0-0",
-                            label: "placeholder",
-                        },
-                        {
-                            key: "0-0-1",
-                            label: "placeholder",
-                        }]
+                    label: "placeholder1",
                 },
                     {
                         key: "0-1",
-                        label: "placeholder",
-                        children: [
-                            {
-                                key: "0-1-0",
-                                label: "placeholder",
-                            }]
+                        label: "placeholder2",
                     }]
             },
             {
@@ -48,15 +34,15 @@ export default class ThreadCreation extends Component {
                 children: [
                     {
                         key: "1-0",
-                        label: "placeholder",
+                        label: "placeholder3",
                     },
                     {
                         key: "1-1",
-                        label: "placeholder",
+                        label: "placeholder4",
                     },
                     {
                         key: "1-2",
-                        label: "placeholder",
+                        label: "placeholder5",
                     }]
             },
             {
@@ -65,29 +51,11 @@ export default class ThreadCreation extends Component {
                 icon: "pi pi-money-bill",
                 children: [{
                     key: "2-0",
-                    label: "placeholder",
-                    children: [
-                        {
-                            key: "2-0-0",
-                            label: "placeholder",
-                        },
-                        {
-                            key: "2-0-1",
-                            label: "placeholder",
-                        }]
+                    label: "placeholder6",
                 },
                     {
                         key: "2-1",
-                        label: "placeholder",
-                        children: [
-                            {
-                                key: "2-1-0",
-                                label: "placeholder",
-                            },
-                            {
-                                key: "2-1-1",
-                                label: "placeholder",
-                            }]
+                        label: "placeholder7",
                     }]
             },
             {
@@ -96,21 +64,16 @@ export default class ThreadCreation extends Component {
                 icon: "pi pi-briefcase",
                 children: [
                     {
-                        key: "3-1-0",
-                        label: "placeholder"
+                        key: "3-0",
+                        label: "placeholder8"
                     },
                     {
-                        key: "3-1-1",
-                        label: "placeholder"
+                        key: "3-1",
+                        label: "placeholder9"
                     }]
             }
         ]
     }
-
-    isParent(e) {
-        return e.key.len === 1
-    }
-
 
     render() {
         return (
@@ -147,7 +110,7 @@ export default class ThreadCreation extends Component {
                         filter
                         placeholder="Select Location"></TreeSelect>
                     <div>
-                        <Button label="Submit" loadingOptions={{position: "right"}}/>
+                        <Button label="Submit" loadingOptions={{position: "right"}} className="p-mt-3"/>
                     </div>
                 </div>
             </div>
