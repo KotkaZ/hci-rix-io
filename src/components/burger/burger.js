@@ -1,4 +1,4 @@
-import { Menu } from "primereact/menu";
+import "./burger.css";
 import React, { Component } from "react";
 import { Button } from "primereact/button";
 
@@ -6,51 +6,27 @@ export default class Burger extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked1: true,
-      checked2: false,
+      checked: false,
     };
-
-    this.items = [
-      {
-        items: [
-          {
-            label: <div className="p-ml-6 p-mt-2 p-mb-2"> Trending </div>,
-          },
-          {
-            label: (
-              <div className="p-ml-6 p-mt-2 p-mb-2"> Software development </div>
-            ),
-          },
-          {
-            label: <div className="p-ml-6 p-mt-2 p-mb-2"> Hardware </div>,
-          },
-          {
-            label: <div className="p-ml-6 p-mt-2 p-mb-2"> Market </div>,
-          },
-          {
-            label: <div className="p-ml-6 p-mt-2 p-mb-2"> Jobs / Career </div>,
-          },
-        ],
-      },
-    ];
   }
 
   render() {
     return (
-      <div className="leftbox">
+      <div className="Burger">
         <Button
-          icon="pi pi-bars"
-          className="p-button-lg"
-          onClick={event => this.menu.toggle(event)}
-          aria-controls="popup_menu"
-          aria-haspopup
+          icon={`pi ${this.state.checked ? "pi-times" : "pi-bars"}`}
+          className="bbars p-button-lg p-button-rounded p-button-text"
+          onClick={e => {
+            this.setState({ checked: !this.state.checked });
+          }}
         />
-        <Menu
-          id="popup_menu"
-          ref={el => (this.menu = el)}
-          popup
-          model={this.items}
-        />
+        <div className={`Siderbar ${this.state.checked ? "open" : "close"}`}>
+          <h3 className="p-m-4 p-pb-4"> Trending </h3>
+          <h3 className="p-m-4"> Software development </h3>
+          <h3 className="p-m-4"> Hardware </h3>
+          <h3 className="p-m-4"> Market </h3>
+          <h3 className="p-m-4"> Jobs / Career </h3>
+        </div>
       </div>
     );
   }
