@@ -5,6 +5,8 @@ import {Editor} from "primereact/editor";
 import {Button} from "primereact/button";
 import {Chips} from "primereact/chips";
 import {TreeSelect} from 'primereact/treeselect';
+import {Link} from "react-router-dom";
+
 
 
 export default class ThreadCreation extends Component {
@@ -111,6 +113,7 @@ export default class ThreadCreation extends Component {
                         placeholder="Select Location"></TreeSelect>
                     <div>
                         <Button label="Submit" loadingOptions={{position: "right"}} className="p-mt-3"/>
+                        <Link to="/"><Button label="Cancel" loadingOptions={{position: "right"}} className="p-mt-3" onClick=""/></Link>
                     </div>
                 </div>
             </div>
