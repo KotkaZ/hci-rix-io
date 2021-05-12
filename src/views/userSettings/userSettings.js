@@ -15,7 +15,7 @@ function UserSettings() {
           />
         </Link>
       </div>
-      <div className="p-col-12">
+      <div className="p-col-12 p-pb-6">
         <UserSettingsComp />
       </div>
     </div>
