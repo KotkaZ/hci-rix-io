@@ -7,12 +7,14 @@ import Pms from "./views/pms/pms";
 import SingleThreadView from "./views/singleThreadView/singleThreadView";
 import ThreadCreation from "./views/threadCreation/threadCreation";
 import ThreadsView from "./views/threadsView/threadsView";
+import UserProfile from "./views/userProfile/userProfile"
 function App() {
   return (
     <div className="App">
       <Nav />
       <Switch>
         <Route path="/" component={MainPage} exact />
+          <Route path="/userProfile" component={UserProfile} exact />
         <Route path="/userSettings" component={UserSettings} exact />
           <Route path="/userMessages" component={Pms} exact />
           <Route path="/singleThreadView" component={SingleThreadView} exact />
