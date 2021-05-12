@@ -1,0 +1,9 @@
+.Pms{
+    background-color: var(--surface-a);
+    color: var(--text-color);
+}
+
+.chat-header, .chat-footer {
+    background-color: var(--primary-color);
+}
+

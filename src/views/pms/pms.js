@@ -19,7 +19,7 @@ export default class Pms extends Component {
     render() {
         return (
             <div className="Pm">
-                <div className="chat-header p-d-block p-m-2 p-d-flex p-ai-center"  style={{fontSize:30, verticalAlign: 'center'}}>
+                <div className="chat-header p-d-block p-p-2 p-d-flex p-ai-center"  style={{fontSize:30, verticalAlign: 'center', position:'sticky', top:0,}}>
                     <Button className="p-button-lg p-m-2" icon="pi pi-chevron-left"/>
                     <Avatar className="p-m-2" image={this.state.chatPartner.imgSrc} shape="circle" size="large"/>
                     {this.state.chatPartner.name}
@@ -39,13 +39,13 @@ export default class Pms extends Component {
                         <Pm text="Deal!" time="10:15" date="12/05/2021" type="start"/>
                     </div>
                 </div>
-                <div className="chat-footer p-d-block p-m-3">
+                <div className="chat-footer p-d-block p-p-3" style={{position:'sticky', bottom:0,}}>
                     <div className="chat-input-field p-jc-center p-ac-center p-grid">
 
                         <Button icon="pi pi-star-o" className="p-button-lg"/>
-                        <Button icon="pi pi-plus"className="p-button-lg" />
+                        <Button icon="pi pi-plus" className="p-button-lg" />
                         <InputText id="in"  className="p-col p-d-inline" value={this.state.value} onChange={(e) => this.setState({value: e.target.value})}/>
-                        <Button icon="pi pi-chevron-right"className="p-button-lg"/>
+                        <Button icon="pi pi-chevron-right" className="p-button-lg"/>
                     </div>
                 </div>
             </div>
