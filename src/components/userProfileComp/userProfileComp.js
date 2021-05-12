@@ -115,6 +115,10 @@ export default class UserProfileComp extends Component {
                             <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
                                 this.toggleDisabled("nickDisabled", true);
                             }}/>}
+                            {!this.state.nickDisabled &&
+                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
+                                this.toggleDisabled("nickDisabled", true);
+                            }}/>}
 
 
                             <h5>Description<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
@@ -125,6 +129,10 @@ export default class UserProfileComp extends Component {
                                            disabled={this.state.descDisabled}/>
                             {!this.state.descDisabled &&
                             <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
+                                this.toggleDisabled("descDisabled", true);
+                            }}/>}
+                            {!this.state.descDisabled &&
+                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
                                 this.toggleDisabled("descDisabled", true);
                             }}/>}
 
@@ -144,6 +152,10 @@ export default class UserProfileComp extends Component {
                             <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
                                 this.toggleDisabled("educDisabled", true);
                             }}/>}
+                            {!this.state.educDisabled &&
+                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
+                                this.toggleDisabled("educDisabled", true);
+                            }}/>}
 
                             <h5>Country<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
                                                onClick={() => this.toggleDisabled("countryDisabled", false)}/></h5>
@@ -155,6 +167,10 @@ export default class UserProfileComp extends Component {
                                       disabled={this.state.countryDisabled}/>
                             {!this.state.countryDisabled &&
                             <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
+                                this.toggleDisabled("countryDisabled", true);
+                            }}/>}
+                            {!this.state.countryDisabled &&
+                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
                                 this.toggleDisabled("countryDisabled", true);
                             }}/>}
 
