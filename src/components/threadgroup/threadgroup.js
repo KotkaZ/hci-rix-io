@@ -10,6 +10,13 @@ export default class Threadgroup extends Component {
   );
 
   render() {
-    return <Card header={this.header}>{this.props.threads}</Card>;
+    let groups = this.props.threads;
+    if (this.props.threads.length > 1) {
+      for (let index = this.props.threads.length - 1; index > 0; index--) {
+        groups.splice(index, 0, <hr />);
+      }
+    }
+
+    return <Card header={this.header}>{groups}</Card>;
   }
 }

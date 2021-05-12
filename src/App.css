@@ -5,5 +5,8 @@ body {
 
 .content {
   background-color: var(--surface-a);
-  height: 100vh;
+}
+
+.nav {
+  position: fixed;
 }
