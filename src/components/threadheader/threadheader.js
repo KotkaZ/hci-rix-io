@@ -1,6 +1,5 @@
 import "./threadheader.css";
 import React, { Component } from "react";
-import { Divider } from "primereact/divider";
 
 export default class Threadheader extends Component {
   constructor(props) {
@@ -13,20 +12,23 @@ export default class Threadheader extends Component {
 
   render() {
     return (
-      <div className="Threadheader p-col-12 p-md-8 p-grid p-nogutter">
-        <div className="p-col-8">
-          <h3 className="p-m-2">{this.props.title}</h3>
-          <h5 className="p-m-2">Started by {this.props.author}</h5>
+      <div className="Threadheader">
+        <div className="p-grid p-nogutter">
+          <div className="p-col-8">
+            <h3 className="p-m-2">{this.props.title}</h3>
+            <h5 className="p-m-2">Started by {this.props.author}</h5>
+          </div>
+          <div className="p-col-2">
+            <h5 className="p-m-2">{this.props.replies} Replies</h5>
+            <h5 className="p-m-2">{this.props.views} Views</h5>
+          </div>
+          <div className="p-col-2">
+            <h5 className="p-m-2">{this.props.lastpost}</h5>
+            <h5 className="p-m-2">by {this.props.lastposter}</h5>
+          </div>
         </div>
-        <div className="p-col-2">
-          <h5 className="p-m-2">{this.props.replies} Replies</h5>
-          <h5 className="p-m-2">{this.props.views} Views</h5>
-        </div>
-        <div className="p-col-2">
-          <h5 className="p-m-2">{this.props.lastpost}</h5>
-          <h5 className="p-m-2">by {this.props.lastposter}</h5>
-        </div>
-        <Divider />
+
+        <hr />
       </div>
     );
   }

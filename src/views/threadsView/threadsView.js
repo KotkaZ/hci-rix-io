@@ -29,11 +29,11 @@ function ThreadsView() {
 
   return (
     <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
-      <div className="p-pt-3 p-pb-3 p-grid p-jc-center p-nogutter">
+      <div className="p-col-10 p-pt-4">
         {items.slice(basicFirst, basicFirst + basicRows)}
       </div>
       <Paginator
-        className="p-col-12 p-md-8 p-mb-0 p-mt-auto"
+        className="p-col-10 p-mb-0 p-mt-auto"
         first={basicFirst}
         rows={basicRows}
         totalRecords={items.length}
