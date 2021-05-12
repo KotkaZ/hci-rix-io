@@ -11,8 +11,7 @@ export default class ThreadCreation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      nodes: null,
-      selectedNodeKey1: null,
+      selectedNodeKey1: this.props.location,
     };
     this.data = [
         {
@@ -128,7 +127,6 @@ export default class ThreadCreation extends Component {
               onChange={(e) => this.setState({ selectedNodeKey1: e.value })}
               filter
               placeholder="Select Location"></TreeSelect>
-
           <div>
             <Button label="Submit" loadingOptions={{ position: "right" }} />
           </div>
