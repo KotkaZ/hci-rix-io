@@ -3,6 +3,7 @@ import Nav from "./components/nav/nav";
 import { Route, Switch } from "react-router-dom";
 import UserSettings from "./views/userSettings/userSettings";
 import UserProfile from "./views/userProfile/userProfile";
+import UserProfileOther from "./views/userProfileOther/userProfileOther"
 import Pms from "./views/pms/pms";
 import SingleThreadView from "./views/singleThreadView/singleThreadView";
 import ThreadCreation from "./views/threadCreation/threadCreation";
@@ -23,6 +24,7 @@ function App() {
           <Switch>
             <Route path="/" component={Software} exact />
             <Route path="/userProfile" component={UserProfile} exact />
+            <Route path="/userProfileOther" component={UserProfileOther} exact />
             <Route path="/userSettings" component={UserSettings} exact />
             <Route path="/userMessages" component={ListPmsView} exact />
             <Route path="/Unga_Punga" component={Pms} exact />

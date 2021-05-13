@@ -1,36 +1,27 @@
-import "./userProfileComp.css";
+import "./userProfileOtherComp.css";
 import React, {Component} from 'react';
-import {Button} from 'primereact/button';
 import {InputText} from 'primereact/inputtext';
 import {Avatar} from 'primereact/avatar';
 import {InputTextarea} from 'primereact/inputtextarea';
 import {InputNumber} from 'primereact/inputnumber';
 import {Dropdown} from 'primereact/dropdown';
 
-export default class UserProfileComp extends Component {
-
+export default class UserProfileOtherComp extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            nickDisabled: true,
-            descDisabled: true,
-            educDisabled: true,
-            countryDisabled: true,
-            genderDisabled: true,
-            ageDisabled: true,
-            nickname: "Lõdvik",
-            desc: "lore ipsum...",
-            educ: "Random inc Highschool",
-            country: {name: 'Spain', code: 'ES'},
-            gender: {name: 'Male'},
-            age: 25,
-            regDate: new Date('December 17, 2020 03:24:00'),
-            numberOfPosts: 46,
-            upvotes: 152,
-            downvotes: 43,
-            regDays: 22
-
+            picture: props.info.picture,
+            nickname: props.info.nickname,
+            desc: props.info.desc,
+            educ: props.info.educ,
+            country: props.info.country,
+            gender: props.info.gender,
+            age: props.info.age,
+            regDate: props.info.regDate,
+            numberOfPosts: props.info.numberOfPosts,
+            upvotes: props.info.upvotes,
+            downvotes: props.info.downvotes,
 
         };
         this.countries = [
@@ -90,19 +81,17 @@ export default class UserProfileComp extends Component {
         return Difference_In_Time / (1000 * 3600 * 24);
     }
 
-
     render() {
         return (
 
-            <div className="UserProfileComp">
+            <div className="UserProfileOtherComp">
                 <div className="p-grid p-jc-center">
 
                     <div className="p-col-10">
                         <div className="p-grid p-justify-center">
                             <Avatar
-                                image="https://i.guim.co.uk/img/media/976161556e63867b492868c15e86ea71b4165c52/0_165_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=b4e203c07941288dab171a18905ad374"
+                                image={this.state.picture}
                                 className="p-mr-2 p-overlay" size="xlarge" shape="circle"/>
-                            <Button icon="pi pi-pencil" className="p-button-rounded p-button-text"/>
                         </div>
 
 
@@ -110,35 +99,14 @@ export default class UserProfileComp extends Component {
                         <hr/>
 
                         <div className="p-fluid p-field">
-                            <h5>Nickname<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
-                                                onClick={() => this.toggleDisabled("nickDisabled", false)}/></h5>
+                            <h5>Nickname</h5>
                             <InputText value={this.state.nickname}
                                        onChange={(e) => this.setState({nickname: e.target.value})} placeholder="Search"
-                                       disabled={this.state.nickDisabled}/>
-                            {!this.state.nickDisabled &&
-                            <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("nickDisabled", true);
-                            }}/>}
-                            {!this.state.nickDisabled &&
-                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("nickDisabled", true);
-                            }}/>}
-
-
-                            <h5>Description<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
-                                                   onClick={() => this.toggleDisabled("descDisabled", false)}/></h5>
-
+                                       disabled/>
+                            <h5>Description</h5>
                             <InputTextarea value={this.state.desc}
                                            onChange={(e) => this.setState({desc: e.target.value})} placeholder="Search"
-                                           disabled={this.state.descDisabled}/>
-                            {!this.state.descDisabled &&
-                            <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("descDisabled", true);
-                            }}/>}
-                            {!this.state.descDisabled &&
-                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("descDisabled", true);
-                            }}/>}
+                                           disabled/>
 
                         </div>
 
@@ -146,51 +114,34 @@ export default class UserProfileComp extends Component {
                         <hr/>
                         <div className="p-fluid p-field">
 
-                            <h5>Education<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
-                                                 onClick={() => this.toggleDisabled("educDisabled", false)}/></h5>
+                            <h5>Education</h5>
                             <InputText
                                 value={this.state.educ}
                                 onChange={(e) => this.setState({educ: e.target.value})} placeholder="Search"
-                                disabled={this.state.educDisabled}/>
-                            {!this.state.educDisabled &&
-                            <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("educDisabled", true);
-                            }}/>}
-                            {!this.state.educDisabled &&
-                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("educDisabled", true);
-                            }}/>}
+                                disabled/>
 
-                            <h5>Country<Button icon="pi pi-pencil" className="p-button-rounded p-button-text"
-                                               onClick={() => this.toggleDisabled("countryDisabled", false)}/></h5>
+
+                            <h5>Country</h5>
                             <Dropdown value={this.state.country} options={this.countries}
                                       onChange={(e) => this.setState({country: e.value})} optionLabel="name" filter
                                       filterBy="name"
                                       valueTemplate={this.selectedCountryTemplate}
                                       itemTemplate={this.countryOptionTemplate}
-                                      disabled={this.state.countryDisabled}/>
-                            {!this.state.countryDisabled &&
-                            <Button icon="pi pi-check" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("countryDisabled", true);
-                            }}/>}
-                            {!this.state.countryDisabled &&
-                            <Button icon="pi pi-times" className="p-button-rounded p-button-text" onClick={() => {
-                                this.toggleDisabled("countryDisabled", true);
-                            }}/>}
+                                      disabled/>
+
 
                             <h5>Gender</h5>
                             <Dropdown value={this.state.gender} options={[{name: 'Male'}, {name: 'Female'}]}
                                       onChange={(e) => this.setState({gender: e.target.value})} optionLabel="name"
-                                      disabled={this.state.genderDisabled}/>
+                                      disabled/>
                             <h5>Age</h5>
                             <InputNumber mode="decimal"
                                          useGrouping={false}
                                          value={this.state.age}
                                          onValueChange={(e) => this.setState({age: e.target.value})}
                                          placeholder="Search"
-                                         disabled={this.state.ageDisabled}
+                                         disabled
                                          min={16} max={150}/>
-
                         </div>
 
                         <h2>Statistics</h2>
@@ -225,12 +176,9 @@ export default class UserProfileComp extends Component {
                                 value={this.state.downvotes}
                                 onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
                                 disabled/>
+
                         </div>
-
-
-
                     </div>
-
 
                 </div>
             </div>

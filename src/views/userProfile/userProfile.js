@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 function UserProfile() {
 
     return (
-        <div className="userSettings">
+        <div className="userProfile">
             <Link to="/"><Button icon="pi pi-times" className="p-button-rounded p-button-text p-button-lg exitButton" /></Link>
             <UserProfileComp/>
         </div>
