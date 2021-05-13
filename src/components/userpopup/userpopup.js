@@ -3,6 +3,7 @@ import { Menu } from "primereact/menu";
 import { InputSwitch } from "primereact/inputswitch";
 import React, { Component } from "react";
 import { Avatar } from "primereact/avatar";
+import history from '../../history';
 
 export default class Userpopup extends Component {
   constructor(props) {
@@ -20,12 +21,12 @@ export default class Userpopup extends Component {
           {
             label: "Profile",
             icon: "pi pi-users",
-            url: "/userProfile",
+            command: () => history.push('/userProfile')
           },
           {
             label: "Direct Messages",
             icon: "pi pi-comments",
-            url: "/userMessages",
+            command: () => history.push('/userMessages')
           },
           {
             label: (
@@ -40,27 +41,27 @@ export default class Userpopup extends Component {
           {
             label: "Settings",
             icon: "pi pi-cog",
-            url: "/userSettings",
+            command: () => history.push('/userSettings')
           },
           {
             label: "Log Out",
             icon: "pi pi-sign-out",
             command: () => {
               console.log("Logout would happen!");
+              history.push('/userLogout')
             },
-            url: "/userLogout",
           },
           {
             label: "SingleThreadView",
-            url: "/singleThreadView",
+            command: () => history.push('/SingleThreadView')
           },
           {
             label: "ThreadCreation",
-            url: "/threadCreation",
+            command: () => history.push('/threadCreation')
           },
           {
             label: "ThreadsView",
-            url: "/threadsView",
+            command: () => history.push('/threadsView')
           },
         ],
       },
