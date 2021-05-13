@@ -84,7 +84,6 @@ export default class ThreadCreation extends Component {
         )
     }
 
-
     render() {
         return (
             <div className="ThreadCreation p-grid p-nogutter p-jc-center">
@@ -122,8 +121,8 @@ export default class ThreadCreation extends Component {
                         filter
                         placeholder="Select Location"></TreeSelect>
                     <div>
-                        <Button label="Submit" loadingOptions={{position: "right"}} className="p-mt-3" onClick={(e) => {this.submitData(this)}} />
-                        <Link to="/"><Button label="Cancel" loadingOptions={{position: "right"}} className="p-mt-3" onClick=""/></Link>
+                        <Button label="Submit" loadingoptions={{position: "right"}} className="p-mt-3" onClick={(e) => {this.submitData(this)}} />
+                        <Link to="/"><Button label="Cancel" loadingoptions={{position: "right"}} className="p-mt-3"/></Link>
                     </div>
                 </div>
             </div>
