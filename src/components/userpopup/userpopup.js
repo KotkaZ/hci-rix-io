@@ -10,8 +10,10 @@ export default class Userpopup extends Component {
     this.state = {
       darkMode: false,
     };
+  }
 
-    this.items = [
+  items() {
+    return [
       {
         label: "Lambi Lõdvik",
         items: [
@@ -67,7 +69,7 @@ export default class Userpopup extends Component {
 
   changeDarkmode() {
     this.setState({ darkMode: !this.state.darkMode });
-    if (this.state.darkMode)
+    if (!this.state.darkMode)
       import("primereact/resources/themes/vela-blue/theme.css");
     else import("primereact/resources/themes/saga-blue/theme.css");
     console.log(this.state.darkMode);
@@ -88,7 +90,7 @@ export default class Userpopup extends Component {
           id="popup_menu"
           ref={el => (this.menu = el)}
           popup
-          model={this.items}
+          model={this.items()}
         />
       </div>
     );
