@@ -21,7 +21,7 @@ function App() {
       <div className="p-grid p-jc-center p-nogutter">
         <div className="p-col-12 p-md-8 content p-shadow-5">
           <Switch>
-            <Route path="/" component={Trending} exact />
+            <Route path="/" component={Software} exact />
             <Route path="/userProfile" component={UserProfile} exact />
             <Route path="/userSettings" component={UserSettings} exact />
             <Route path="/userMessages" component={ListPmsView} exact />
