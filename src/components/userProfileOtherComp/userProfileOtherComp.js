@@ -49,7 +49,7 @@ export default class UserProfileOtherComp extends Component {
                             <h5>Nickname</h5>
                             <label>{this.state.nickname}</label>
                             <h5>Description</h5>
-                            <p>{this.state.educ}</p>
+                            <p>{this.state.desc}</p>
 
                         </div>
 
