@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Trheadheader from "../../components/threadheader/threadheader";
+import ThreadsView from "../threadsView/threadsView";
 
 export default class Trending extends Component {
   render() {
@@ -56,7 +57,9 @@ export default class Trending extends Component {
 
     return (
       <div className="p-grid p-jc-center">
-        <div className="p-col-10 p-mt-3 p-mb-3">{trendingThreads}</div>
+        <div className="p-col-10 p-mt-3 p-mb-3">
+          <ThreadsView threads={trendingThreads}></ThreadsView>
+        </div>
       </div>
     );
   }
