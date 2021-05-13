@@ -4,7 +4,6 @@ import {Button} from 'primereact/button';
 import {InputText} from 'primereact/inputtext';
 import {Avatar} from 'primereact/avatar';
 import {InputTextarea} from 'primereact/inputtextarea';
-import {InputNumber} from 'primereact/inputnumber';
 import {Dropdown} from 'primereact/dropdown';
 
 export default class UserProfileComp extends Component {
@@ -179,52 +178,30 @@ export default class UserProfileComp extends Component {
                             }}/>}
 
                             <h5>Gender</h5>
-                            <Dropdown value={this.state.gender} options={[{name: 'Male'}, {name: 'Female'}]}
-                                      onChange={(e) => this.setState({gender: e.target.value})} optionLabel="name"
-                                      disabled={this.state.genderDisabled}/>
+                            <label>{this.state.gender.name}</label>
                             <h5>Age</h5>
-                            <InputNumber mode="decimal"
-                                         useGrouping={false}
-                                         value={this.state.age}
-                                         onValueChange={(e) => this.setState({age: e.target.value})}
-                                         placeholder="Search"
-                                         disabled={this.state.ageDisabled}
-                                         min={16} max={150}/>
+                            <label>{this.state.age}</label>
 
                         </div>
+
 
                         <h2>Statistics</h2>
                         <hr/>
                         <div className="p-fluid p-field">
                             <h5>Registration Date</h5>
-                            <InputText
-                                value={this.state.regDate.toDateString()}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.regDate.toDateString()}</label>
 
                             <h5>Days since first registering</h5>
-                            <InputText
-                                value={Math.floor(this.timeBetweenInDays(this.state.regDate, new Date()))}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{Math.floor(this.timeBetweenInDays(this.state.regDate, new Date()))}</label>
 
                             <h5>Number of posts</h5>
-                            <InputText
-                                value={this.state.numberOfPosts}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.numberOfPosts}</label>
 
                             <h5>Upvotes received</h5>
-                            <InputText
-                                value={this.state.upvotes}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.upvotes}</label>
 
                             <h5>Downvotes received</h5>
-                            <InputText
-                                value={this.state.downvotes}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.downvotes}</label>
                         </div>
 
 
