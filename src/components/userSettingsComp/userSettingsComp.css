@@ -1,9 +1,9 @@
 
-p {
+#underlineP {
     text-decoration: underline;
 }
 
-p:hover {
+#underlineP:hover {
     cursor: pointer;
 }
 

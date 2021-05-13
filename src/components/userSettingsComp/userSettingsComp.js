@@ -117,10 +117,10 @@ export default class UserSettingsComp extends Component {
                     <div className="p-col-10">
                         <h2>User Settings</h2>
                         <hr/>
-                        <p onClick={() => this.onClick("displayEmail")}>
+                        <p id="underlineP" onClick={() => this.onClick("displayEmail")}>
                             Change your email
                         </p>
-                        <p onClick={() => this.onClick("displayPassword")}>
+                        <p id="underlineP" onClick={() => this.onClick("displayPassword")}>
                             Reset password
                         </p>
                         <p id="accDel" onClick={() => this.onClick("displayDel")}>

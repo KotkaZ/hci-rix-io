@@ -1,10 +1,6 @@
 import "./userProfileOtherComp.css";
 import React, {Component} from 'react';
-import {InputText} from 'primereact/inputtext';
 import {Avatar} from 'primereact/avatar';
-import {InputTextarea} from 'primereact/inputtextarea';
-import {InputNumber} from 'primereact/inputnumber';
-import {Dropdown} from 'primereact/dropdown';
 
 export default class UserProfileOtherComp extends Component {
 
@@ -24,57 +20,8 @@ export default class UserProfileOtherComp extends Component {
             downvotes: props.info.downvotes,
 
         };
-        this.countries = [
-            {name: 'Australia', code: 'AU'},
-            {name: 'Brazil', code: 'BR'},
-            {name: 'China', code: 'CN'},
-            {name: 'Egypt', code: 'EG'},
-            {name: 'France', code: 'FR'},
-            {name: 'Germany', code: 'DE'},
-            {name: 'India', code: 'IN'},
-            {name: 'Japan', code: 'JP'},
-            {name: 'Spain', code: 'ES'},
-            {name: 'United States', code: 'US'}
-        ];
     }
 
-    toggleDisabled(name, value) {
-        let state = {
-            [`${name}`]: value
-        };
-
-        this.setState(state);
-    }
-
-    selectedCountryTemplate(option, props) {
-        if (option) {
-            return (
-                <div className="country-item country-item-value">
-                    <img alt={option.name} src={`https://www.countryflags.io/${option.code}/flat/32.png`}
-                         onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'}
-                         className={`flag flag-${option.code.toLowerCase()}`}/>
-                    <div>{option.name}</div>
-                </div>
-            );
-        }
-
-        return (
-            <span>
-                {props.placeholder}
-            </span>
-        );
-    }
-
-    countryOptionTemplate(option) {
-        return (
-            <div className="country-item">
-                <img alt={option.name} src={`https://www.countryflags.io/${option.code}/flat/32.png`}
-                     onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'}
-                     className={`flag flag-${option.code.toLowerCase()}`}/>
-                <div>{option.name}</div>
-            </div>
-        );
-    }
 
     timeBetweenInDays(date1, date2) {
         let Difference_In_Time = date2.getTime() - date1.getTime();
@@ -100,13 +47,9 @@ export default class UserProfileOtherComp extends Component {
 
                         <div className="p-fluid p-field">
                             <h5>Nickname</h5>
-                            <InputText value={this.state.nickname}
-                                       onChange={(e) => this.setState({nickname: e.target.value})} placeholder="Search"
-                                       disabled/>
+                            <label>{this.state.nickname}</label>
                             <h5>Description</h5>
-                            <InputTextarea value={this.state.desc}
-                                           onChange={(e) => this.setState({desc: e.target.value})} placeholder="Search"
-                                           disabled/>
+                            <p>{this.state.educ}</p>
 
                         </div>
 
@@ -115,67 +58,41 @@ export default class UserProfileOtherComp extends Component {
                         <div className="p-fluid p-field">
 
                             <h5>Education</h5>
-                            <InputText
-                                value={this.state.educ}
-                                onChange={(e) => this.setState({educ: e.target.value})} placeholder="Search"
-                                disabled/>
+                            <label>{this.state.educ}</label>
 
 
                             <h5>Country</h5>
-                            <Dropdown value={this.state.country} options={this.countries}
-                                      onChange={(e) => this.setState({country: e.value})} optionLabel="name" filter
-                                      filterBy="name"
-                                      valueTemplate={this.selectedCountryTemplate}
-                                      itemTemplate={this.countryOptionTemplate}
-                                      disabled/>
+                            <div className="country-item">
+                                <img alt={this.state.country.name} src={`https://www.countryflags.io/${this.state.country.code}/flat/64.png`}
+                                     onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'}
+                                     className={`flag flag-${this.state.country.code.toLowerCase()}`}/>
+                                <div>{this.state.country.name}</div>
+                            </div>
 
 
                             <h5>Gender</h5>
-                            <Dropdown value={this.state.gender} options={[{name: 'Male'}, {name: 'Female'}]}
-                                      onChange={(e) => this.setState({gender: e.target.value})} optionLabel="name"
-                                      disabled/>
+                            <label>{this.state.gender.name}</label>
                             <h5>Age</h5>
-                            <InputNumber mode="decimal"
-                                         useGrouping={false}
-                                         value={this.state.age}
-                                         onValueChange={(e) => this.setState({age: e.target.value})}
-                                         placeholder="Search"
-                                         disabled
-                                         min={16} max={150}/>
+                            <label>{this.state.age}</label>
                         </div>
 
                         <h2>Statistics</h2>
                         <hr/>
                         <div className="p-fluid p-field">
                             <h5>Registration Date</h5>
-                            <InputText
-                                value={this.state.regDate.toDateString()}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.regDate.toDateString()}</label>
 
                             <h5>Days since first registering</h5>
-                            <InputText
-                                value={Math.floor(this.timeBetweenInDays(this.state.regDate, new Date()))}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{Math.floor(this.timeBetweenInDays(this.state.regDate, new Date()))}</label>
 
                             <h5>Number of posts</h5>
-                            <InputText
-                                value={this.state.numberOfPosts}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.numberOfPosts}</label>
 
                             <h5>Upvotes received</h5>
-                            <InputText
-                                value={this.state.upvotes}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.upvotes}</label>
 
                             <h5>Downvotes received</h5>
-                            <InputText
-                                value={this.state.downvotes}
-                                onChange={(e) => this.setState({regDate: e.target.value})} placeholder="0"
-                                disabled/>
+                            <label>{this.state.downvotes}</label>
 
                         </div>
                     </div>
