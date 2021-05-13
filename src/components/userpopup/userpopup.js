@@ -10,6 +10,7 @@ export default class Userpopup extends Component {
     this.state = {
       darkMode: false,
     };
+
     this.items = [
       {
         label: "Lambi Lõdvik",
@@ -17,30 +18,27 @@ export default class Userpopup extends Component {
           {
             label: "Profile",
             icon: "pi pi-users",
-            url: '/userProfile'
+            url: "/userProfile",
           },
           {
             label: "Direct Messages",
             icon: "pi pi-comments",
-            url: '/userMessages'
+            url: "/userMessages",
           },
           {
             label: (
-              <div>
-                <span>Dark Mode </span>
-                <InputSwitch
-                  checked={this.state.darkMode}
-                  onChange={(e) => this.setState({darkMode: e.target.value})}
-                  //onChange={(e) => console.log(e.target.value )}
-                />
+              <div className="p-d-flex p-ai-center">
+                <span className="p-mr-2">Dark Mode</span>
+                <InputSwitch checked={this.state.darkMode} />
               </div>
             ),
             icon: "pi pi-moon",
+            command: () => this.changeDarkmode(),
           },
           {
             label: "Settings",
             icon: "pi pi-cog",
-            url: '/userSettings'
+            url: "/userSettings",
           },
           {
             label: "Log Out",
@@ -48,23 +46,31 @@ export default class Userpopup extends Component {
             command: () => {
               console.log("Logout would happen!");
             },
-            url: '/userLogout'
+            url: "/userLogout",
           },
           {
             label: "SingleThreadView",
-            url: '/singleThreadView'
+            url: "/singleThreadView",
           },
           {
             label: "ThreadCreation",
-            url: '/threadCreation'
+            url: "/threadCreation",
           },
           {
             label: "ThreadsView",
-            url: '/threadsView'
-          }
+            url: "/threadsView",
+          },
         ],
       },
     ];
+  }
+
+  changeDarkmode() {
+    this.setState({ darkMode: !this.state.darkMode });
+    if (this.state.darkMode)
+      import("primereact/resources/themes/vela-blue/theme.css");
+    else import("primereact/resources/themes/saga-blue/theme.css");
+    console.log(this.state.darkMode);
   }
 
   render() {
