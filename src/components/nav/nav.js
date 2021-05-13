@@ -4,18 +4,15 @@ import { InputText } from "primereact/inputtext";
 import Userpopup from "../userpopup/userpopup";
 import Burger from "../burger/burger";
 import { BreadCrumb } from "primereact/breadcrumb";
+import history from "../../history";
 
 export default class Nav extends Component {
   render() {
-    const items = [
-      { label: "Jobs/career" },
-      { label: "Noital" },
-      { label: "Lodon" },
-    ];
+    const items = [{ label: history.location.pathname }];
 
     const home = {
       icon: "pi pi-home",
-      url: "https://www.primefaces.org/primereact",
+      url: "http://localhost:3000/",
     };
 
     return (
