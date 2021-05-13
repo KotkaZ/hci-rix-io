@@ -77,6 +77,13 @@ export default class ThreadCreation extends Component {
         ]
     }
 
+    submitData(e) {
+        let subforum = e.state.selectedNodeKey1
+        console.log("Submitted!",
+            {subforum : subforum},
+        )
+    }
+
     render() {
         return (
             <div className="ThreadCreation p-grid p-nogutter p-jc-center">
@@ -105,15 +112,17 @@ export default class ThreadCreation extends Component {
                         options={this.data}
                         onChange={(e) => {
                             if (e.value.length > 1) {
-                                this.setState({selectedNodeKey1: e.value})
+                                this.setState({selectedNodeKey1: e.value })
+                            } else {
+                                this.setState({selectedNodeKey1: undefined })
                             }
                         }
                         }
                         filter
                         placeholder="Select Location"></TreeSelect>
                     <div>
-                        <Button label="Submit" loadingOptions={{position: "right"}} className="p-mt-3"/>
-                        <Link to="/"><Button label="Cancel" loadingOptions={{position: "right"}} className="p-mt-3" onClick=""/></Link>
+                        <Button label="Submit" loadingoptions={{position: "right"}} className="p-mt-3" onClick={(e) => {this.submitData(this)}} />
+                        <Link to="/"><Button label="Cancel" loadingoptions={{position: "right"}} className="p-mt-3"/></Link>
                     </div>
                 </div>
             </div>
