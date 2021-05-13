@@ -10,19 +10,33 @@ export default class Userpopup extends Component {
         super(props);
         this.state = {
             darkMode: false,
-            stylePath: 'primereact/resources/themes/saga-blue/theme.css'
+            stylePath: '~primereact/resources/themes/saga-blue/theme.css',
         };
     }
-
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevState.darkMode !== this.state.darkMode) {
             if (!this.state.darkMode) {
+                //ligthmode
+                document.querySelectorAll("style").forEach(item => {
+                    if (item.innerText.length === 557260) {
+                        item.remove()
+                    }
+                    console.log(item.innerText.length)
+
+                })
                 import("primereact/resources/themes/saga-blue/theme.css");
                 this.stylePath = ("primereact/resources/themes/saga-blue/theme.css");
                 console.log("Changed to light mode!")
                 console.log(this.stylePath)
             } else {
-                import("primereact/resources/themes/vela-blue/theme.css");
+                //darkmode
+                document.querySelectorAll("style").forEach(item => {
+                    if (item.innerText.length === 1) { //make it delete dark scheme vela blue
+                        item.remove()
+                    }
+                    console.log(item.innerText.length)
+                })
+                import("primereact/resources/themes/luna-amber/theme.css");
                 this.stylePath = ("primereact/resources/themes/vela-blue/theme.css");
                 console.log("Changed to dark mode!")
                 console.log(this.stylePath)
