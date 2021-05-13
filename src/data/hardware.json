@@ -1,0 +1,36 @@
+[
+  {
+    "title": "PC World",
+    "threads": [
+      {
+        "title": "CPUs",
+        "desc": "Its all about the AMD!"
+      },
+      {
+        "title": "GPUs",
+        "desc": "Its all about the AMD!"
+      },
+      {
+        "title": "Memory modules",
+        "desc": "HDDs, SSDs, RAM etc."
+      },
+      {
+        "title": "Cool projects",
+        "desc": "Epic nitrogen PCs only!"
+      }
+    ]
+  },
+  {
+    "title": "Server",
+    "threads": [
+      {
+        "title": "Guides",
+        "desc": "Tutorials from professionals"
+      },
+      {
+        "title": "Help section",
+        "desc": "Ask here, when you need help"
+      }
+    ]
+  }
+]
