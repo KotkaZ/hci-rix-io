@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Software developers ♥",
+    "threads": [
+      {
+        "title": "Fullstack developer",
+        "desc": "Fullstack developers"
+      },
+      {
+        "title": "Frontend developer",
+        "desc": "Only frontend jobposts"
+      },
+      {
+        "title": "Backend developer",
+        "desc": "All backend jobs"
+      },
+      {
+        "title": "Cloud engineer",
+        "desc": "Only cloud engineering jobs"
+      },
+      {
+        "title": "Software architect",
+        "desc": "Architects, look jobs here!"
+      },
+      {
+        "title": "Misc",
+        "desc": "All the others"
+      }
+    ]
+  },
+  {
+    "title": "The hardware guys",
+    "threads": [
+      {
+        "title": "Server maintainer",
+        "desc": "Lorem ipsum dolor sit amet"
+      },
+      {
+        "title": "Help section",
+        "desc": "Lorem ipsum dolor sit amet"
+      }
+    ]
+  }
+]
