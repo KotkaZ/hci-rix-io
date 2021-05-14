@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Threadgroup from "../../components/threadgroup/threadgroup";
-import data from "../../data/hardware.json";
+import data from "../../data/software.json";
 
 export default class Software extends Component {
   render() {

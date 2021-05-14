@@ -2,7 +2,7 @@ import { Paginator } from "primereact/paginator";
 import { Button } from "primereact/button";
 import React, { Component } from "react";
 import Threadheader from "../../components/threadheader/threadheader";
-
+import loremipsumthreads from "../../data/loremipsumthreads.json";
 import history from "../../history";
 import "./threadsView.css";
 
@@ -22,9 +22,9 @@ export default class ThreadsView extends Component {
   }
 
   render() {
-    const threads = [];
-    for (const thread of this.props.threads) {
-      threads.push(
+    const data = this.props.threads ? this.props.threads : loremipsumthreads;
+    const threads = data.map(thread => {
+      return (
         <Threadheader
           title={thread.title}
           author={thread.author}
@@ -34,7 +34,7 @@ export default class ThreadsView extends Component {
           lastposter={thread.lastposter}
         />
       );
-    }
+    });
 
     return (
       <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">

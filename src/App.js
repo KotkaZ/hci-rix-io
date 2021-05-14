@@ -14,6 +14,8 @@ import Jobs from "./views/subforums/jobs";
 import Software from "./views/subforums/software";
 import Hardware from "./views/subforums/hardware";
 import Market from "./views/subforums/market";
+import ThreadsView from "./views/threadsView/threadsView";
+
 import React, { Component } from "react";
 
 export default class App extends Component {
@@ -35,6 +37,7 @@ export default class App extends Component {
               <Route path="/userMessages" component={ListPmsView} exact />
               <Route path="/Unga_Punga" component={Pms} exact />
 
+              <Route path="/threadsView" component={ThreadsView} exact />
               <Route
                 path="/singleThreadView"
                 component={SingleThreadView}
