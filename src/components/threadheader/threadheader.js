@@ -1,5 +1,6 @@
 import "./threadheader.css";
 import React, { Component } from "react";
+import history from "../../history";
 
 export default class Threadheader extends Component {
   constructor(props) {
@@ -12,7 +13,10 @@ export default class Threadheader extends Component {
 
   render() {
     return (
-      <div className="Threadheader">
+      <div
+        className="Threadheader"
+        onClick={() => history.push("/singleThreadView")}
+      >
         <div className="p-grid p-nogutter">
           <div className="p-col-8">
             <h3 className="p-m-2">{this.props.title}</h3>

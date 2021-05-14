@@ -1,0 +1,7 @@
+.mainThread {
+  background-color: var(--surface-c) !important;
+}
+
+.post {
+  background-color: var(--surface-a) !important;
+}
