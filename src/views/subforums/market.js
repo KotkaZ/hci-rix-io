@@ -1,25 +1,12 @@
 import React, { Component } from "react";
 import Threadgroup from "../../components/threadgroup/threadgroup";
-import ThreadGroupElement from "../../components/threadgroupelement/threadgroupelement";
+import data from "../../data/market.json";
 
 export default class Market extends Component {
   render() {
-    const frontendThreads = [
-      <ThreadGroupElement title="Guides" desc="Tutorials from professionals" />,
-      <ThreadGroupElement title="Cool projects" desc="Fun fun fun" />,
-      <ThreadGroupElement title="Cool projects" desc="Fun fun fun" />,
-      <ThreadGroupElement title="Cool projects" desc="Fun fun fun" />,
-    ];
-
-    const backendThreads = [
-      <ThreadGroupElement title="Guides" desc="Tutorials from professionals" />,
-      <ThreadGroupElement title="Cool projects" desc="Fun fun fun" />,
-    ];
-
-    const groups = [
-      <Threadgroup title="Frontend development" threads={frontendThreads} />,
-      <Threadgroup title="Backend development" threads={backendThreads} />,
-    ];
+    const groups = data.map(data => {
+      return <Threadgroup title={data.title} threads={data.threads} />;
+    });
 
     return (
       <div className="p-grid p-jc-center">
