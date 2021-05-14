@@ -2,6 +2,7 @@ import "./threadPost.css";
 import React, { Component } from "react";
 import { Avatar } from "primereact/avatar";
 import { Card } from "primereact/card";
+import history from "../../history";
 
 export default class ThreadPost extends Component {
   render() {
@@ -13,6 +14,7 @@ export default class ThreadPost extends Component {
             size="xlarge"
             shape="circle"
             className="p-mt-3"
+            onClick={() => history.push("/userProfileOther")}
           />
 
           <div className="p-ml-2">
