@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Frontend development",
+    "threads": [
+      {
+        "title": "Guides",
+        "desc": "Tutorials from professionals"
+      },
+      {
+        "title": "Cool projects",
+        "desc": "Fun fun fun"
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      },
+      {
+        "title": "Lorem ipsum dolor sit amet",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      }
+    ]
+  },
+  {
+    "title": "Backend development",
+    "threads": [
+      {
+        "title": "Guides",
+        "desc": "Tutorials from professionals"
+      },
+      {
+        "title": "Cool projects",
+        "desc": "Fun fun fun"
+      }
+    ]
+  }
+]
