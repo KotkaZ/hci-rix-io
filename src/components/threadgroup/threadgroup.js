@@ -11,12 +11,6 @@ export default class Threadgroup extends Component {
 
   render() {
     const groups = [];
-    if (this.props.threads.length > 1) {
-      for (let index = this.props.threads.length - 1; index > 0; index--) {
-        groups.splice(index, 0, <hr />);
-      }
-    }
-
     for (const threadgroup of this.props.threads) {
       groups.push(
         <ThreadGroupElement title={threadgroup.title} desc={threadgroup.desc} />

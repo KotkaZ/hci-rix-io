@@ -1,6 +1,7 @@
 import { Paginator } from "primereact/paginator";
 import { Button } from "primereact/button";
 import React, { Component } from "react";
+import Threadheader from "../../components/threadheader/threadheader";
 
 import history from "../../history";
 import "./threadsView.css";
@@ -21,6 +22,20 @@ export default class ThreadsView extends Component {
   }
 
   render() {
+    const threads = [];
+    for (const thread of this.props.threads) {
+      threads.push(
+        <Threadheader
+          title={thread.title}
+          author={thread.author}
+          replies={thread.replies}
+          views={thread.views}
+          lastpost={thread.lastpost}
+          lastposter={thread.lastposter}
+        />
+      );
+    }
+
     return (
       <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
         <div className="p-col-10 p-pt-4 p-grid p-jc-center">
@@ -32,7 +47,7 @@ export default class ThreadsView extends Component {
         </div>
 
         <div className="p-col-10">
-          {this.props.threads.slice(
+          {threads.slice(
             this.state.basicFirst,
             this.state.basicFirst + this.state.basicRows
           )}
@@ -41,7 +56,7 @@ export default class ThreadsView extends Component {
           className="p-col-10 p-mb-0 p-mt-auto"
           first={this.state.basicFirst}
           rows={this.state.basicRows}
-          totalRecords={this.props.threads.length}
+          totalRecords={threads.length}
           rowsPerPageOptions={[10, 20, 30]}
           onPageChange={e => this.onBasicPageChange(e)}
         ></Paginator>
