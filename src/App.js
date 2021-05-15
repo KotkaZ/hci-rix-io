@@ -24,7 +24,7 @@ export default class App extends Component {
       <div className="App">
         <Nav />
         <div className="p-grid p-jc-center p-nogutter">
-          <div className="p-col-12 p-md-8 content p-shadow-5">
+          <div className="p-col-12 p-xl-8 content p-shadow-5">
             <Switch>
               <Route path="/" component={Trending} exact />
               <Route path="/userProfile" component={UserProfile} exact />
