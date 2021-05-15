@@ -21,37 +21,37 @@ import React, { Component } from "react";
 export default class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Nav />
-        <div className="p-grid p-jc-center p-nogutter">
-          <div className="p-col-12 p-xl-8 content p-shadow-5">
-            <Switch>
-              <Route path="/" component={Trending} exact />
-              <Route path="/userProfile" component={UserProfile} exact />
-              <Route
-                path="/userProfileOther"
-                component={UserProfileOther}
-                exact
-              />
-              <Route path="/userSettings" component={UserSettings} exact />
-              <Route path="/userMessages" component={ListPmsView} exact />
-              <Route path="/Unga_Punga" component={Pms} exact />
+      <div className="App p-grid p-jc-center p-nogutter">
+        <div className="p-col-12 navbar">
+          <Nav />
+        </div>
+        <div className="p-col-12 p-xl-8 content p-shadow-5">
+          <Switch>
+            <Route path="/" component={Trending} exact />
+            <Route path="/userProfile" component={UserProfile} exact />
+            <Route
+              path="/userProfileOther"
+              component={UserProfileOther}
+              exact
+            />
+            <Route path="/userSettings" component={UserSettings} exact />
+            <Route path="/userMessages" component={ListPmsView} exact />
+            <Route path="/Unga_Punga" component={Pms} exact />
 
-              <Route path="/threadsView" component={ThreadsView} exact />
-              <Route
-                path="/singleThreadView"
-                component={SingleThreadView}
-                exact
-              />
-              <Route path="/threadCreation" component={ThreadCreation} exact />
-              <Route path="/trending" component={Trending} exact />
-              <Route path="/jobs" component={Jobs} exact />
-              <Route path="/software" component={Software} exact />
-              <Route path="/hardware" component={Hardware} exact />
-              <Route path="/market" component={Market} exact />
-              <Route component={Error} />
-            </Switch>
-          </div>
+            <Route path="/threadsView" component={ThreadsView} exact />
+            <Route
+              path="/singleThreadView"
+              component={SingleThreadView}
+              exact
+            />
+            <Route path="/threadCreation" component={ThreadCreation} exact />
+            <Route path="/trending" component={Trending} exact />
+            <Route path="/jobs" component={Jobs} exact />
+            <Route path="/software" component={Software} exact />
+            <Route path="/hardware" component={Hardware} exact />
+            <Route path="/market" component={Market} exact />
+            <Route component={Error} />
+          </Switch>
         </div>
       </div>
     );
