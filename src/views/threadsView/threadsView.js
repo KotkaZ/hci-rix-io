@@ -55,7 +55,7 @@ export default class ThreadsView extends Component {
     return (
       <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
         <div className="p-col-10 p-pt-4 p-grid p-jc-between">
-          <div className="p-grid p-my-3">
+          <div className="p-grid p-my-auto">
             <span className="p-float-label">
               <Chips
                 id="tags"

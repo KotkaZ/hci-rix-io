@@ -25,22 +25,17 @@ export default class Threadheader extends Component {
         onClick={() => history.push("/singleThreadView")}
       >
         <div className="p-grid p-nogutter">
-          <div className="p-col-4">
-            <h3 className="p-m-1">{this.props.title}</h3>
-            <Chip
-              label={this.props.author}
-              image={this.props.avatar}
-              className="p-m-1"
-            />
+          <div className="p-col-5 p-grid p-nogutter">
+            <h3 className="p-col-12 p-m-1">{this.props.title}</h3>
+            <div className="p-col-12 p-d-flex p-ai-center">
+              <Chip label={this.props.author} image={this.props.avatar} />
+              <h5 className="p-m-0 p-pl-3">{this.props.lastpost}</h5>
+            </div>
           </div>
-          <div className="p-col-4 p-d-flex p-ai-end">{tags}</div>
-          <div className="p-col-2">
-            <h5 className="p-m-1">{this.props.lastpost}</h5>
-            <h5 className="p-m-1">by {this.props.lastposter}</h5>
-          </div>
-          <div className="p-col-2">
-            <h5 className="p-m-1">{this.props.replies} Replies</h5>
-            <h5 className="p-m-1">{this.props.views} Views</h5>
+          <div className="p-col-5 p-d-flex p-ai-center">{tags}</div>
+          <div className="p-col-2 p-grid  p-jc-center p-ai-center">
+            <h5 className="p-m-0">{this.props.replies} Replies</h5>
+            <h5 className="p-m-0">{this.props.views} Views</h5>
           </div>
         </div>
 
