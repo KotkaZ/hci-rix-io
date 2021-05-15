@@ -8,7 +8,7 @@ function UserSettings() {
   return (
     <div className="userSettings p-grid p-nogutter">
       <div className="p-col-12 p-p-3 p-grid p-jc-end p-nogutter">
-        <Link to="/">
+        <Link to="/" className="link">
           <Button
             icon="pi pi-times"
             className="p-button-rounded p-button-text p-button-lg exitButton"
