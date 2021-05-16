@@ -40,7 +40,7 @@ export default class PrePm extends Component {
             onMouseLeave={this.hoverEnd}
             onClick={this.goToChat}
           >
-            <div className="p-grid p-col-4 p-ai-center p-p-2 p-nogutter">
+            <div className="p-grid p-col-4 p-ai-center p-p-2 p-nogutter p-flex-nowrap">
               <Avatar
                 className="p-m-2"
                 image={this.props.imgSrc}
