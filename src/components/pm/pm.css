@@ -1,3 +1,9 @@
+@media only screen and (max-width: 600px) {
+    div.message-box {
+        max-width: 90vw !important;
+    }
+}
+
 .Pm {
     color: var(--text-color);
 }
@@ -12,8 +18,8 @@ div.message.start-type{
 
 div.message-box {
     border-radius: 25px;
-    width: auto !important;
-
+    max-width: 35vw;
+    word-wrap: break-word;
 }
 
 div.message.end-type div.message-box{
@@ -29,3 +35,4 @@ div.message.start-type div.message-box{
 .message-datetime {
     font-size: 1vh;
 }
+
