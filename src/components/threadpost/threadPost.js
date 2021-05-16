@@ -2,6 +2,7 @@ import "./threadPost.css";
 import React, { Component } from "react";
 import { Avatar } from "primereact/avatar";
 import { Card } from "primereact/card";
+import { Button } from "primereact/button";
 import history from "../../history";
 
 export default class ThreadPost extends Component {
@@ -11,25 +12,40 @@ export default class ThreadPost extends Component {
         <div className="p-d-flex p-ml-4 p-mr-0">
           <Avatar
             image={this.props.avatar}
-            size="xlarge"
+            size="large"
             shape="circle"
             className="p-mt-3"
             onClick={() => history.push("/userProfileOther")}
           />
 
-          <div className="p-ml-2">
-            <h3>{this.props.username}</h3>
-            <h3>{this.props.date}</h3>
+          <div className="p-ml-2 p-mt-3">
+            <h3 className="p-m-0">{this.props.username}</h3>
+            <p className="p-m-0">{this.props.date}</p>
           </div>
         </div>
 
-        <h1 className="p-mt-5">{this.props.threadname}</h1>
-        <div className="Upvote p-grid p-jc-end p-mr-6 p-mt-3">
-          <i className="pi pi-arrow-circle-up" style={{ fontSize: "4em" }}></i>
-          <i
-            className="pi pi-arrow-circle-down"
-            style={{ fontSize: "4em" }}
-          ></i>
+        <h2 className="p-my-auto">{this.props.threadname}</h2>
+        <div className="Upvote p-grid p-jc-end p-mr-4 p-mt-3">
+          <Button
+            icon="pi pi-arrow-up"
+            label="281"
+            className="p-button-rounded p-button-success p-button-outlined p-mr-2"
+            tooltip="This feature is not supported in prototype!"
+            tooltipOptions={{
+              className: "pink-tooltip",
+              position: "bottom",
+            }}
+          />
+          <Button
+            icon="pi pi-arrow-down"
+            label="281"
+            className="p-button-rounded p-button-danger p-button-outlined"
+            tooltip="This feature is not supported in prototype!"
+            tooltipOptions={{
+              className: "pink-tooltip",
+              position: "bottom",
+            }}
+          />
         </div>
       </div>
     );
