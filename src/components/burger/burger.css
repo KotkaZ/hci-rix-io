@@ -15,8 +15,8 @@
   background-color: var(--surface-a);
 }
 
-h3 {
-  cursor: pointer;
+#logo {
+  width: 100px;
 }
 
 .link {

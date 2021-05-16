@@ -4,15 +4,19 @@ import { InputText } from "primereact/inputtext";
 import Userpopup from "../userpopup/userpopup";
 import Burger from "../burger/burger";
 import { BreadCrumb } from "primereact/breadcrumb";
-import history from "../../history";
 
 export default class Nav extends Component {
   render() {
-    const items = [{ label: history.location.pathname }];
+    const items = [
+      { label: "Not" },
+      { label: "Supported" },
+      { label: "In" },
+      { label: "Prototype" },
+    ];
 
     const home = {
       icon: "pi pi-home",
-      url: "http://localhost:3000/",
+      url: "/",
     };
 
     return (
@@ -25,13 +29,20 @@ export default class Nav extends Component {
           <div className="p-col-7 p-xl-4 p-fluid">
             <span className="p-input-icon-left p-field p-m-0">
               <i className="pi pi-search" />
-              <InputText placeholder="Search" />
+              <InputText
+                placeholder="Search"
+                tooltip="This feature is not supported in prototype!"
+                tooltipOptions={{
+                  className: "pink-tooltip",
+                  position: "bottom",
+                }}
+              />
             </span>
           </div>
 
           <div className="p-col-4">
-            <div className="p-grid vertical-container p-jc-end p-mr-2 p-ai-center p-nogutter">
-              <h3 className="p-m-1 p-pr-3">Lambi Lõdvik</h3>
+            <div className="p-grid vertical-container p-jc-end p-mr-2 p-pt-1 p-ai-center p-nogutter">
+              <h3 className="p-m-0 p-pr-2">Lambi Lõdvik</h3>
               <Userpopup />
             </div>
           </div>

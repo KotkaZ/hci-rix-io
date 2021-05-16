@@ -2,6 +2,7 @@ import "./burger.css";
 import React, { Component } from "react";
 import { Button } from "primereact/button";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.png";
 
 export default class Burger extends Component {
   constructor(props) {
@@ -22,6 +23,10 @@ export default class Burger extends Component {
           }}
         />
         <div className={`Siderbar ${this.state.checked ? "open" : "close"}`}>
+          <div className="p-d-flex p-jc-center p-my-6">
+            <img src={logo} id="logo" alt="Logo"></img>
+          </div>
+
           <Link className="link" to="/trending">
             <h3 className="p-m-4 p-pb-4"> Trending</h3>
           </Link>
