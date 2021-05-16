@@ -24,7 +24,7 @@ export default class ThreadCreation extends Component {
 
   render() {
     return (
-      <div className="ThreadCreation p-grid p-nogutter p-jc-center">
+      <div className="ThreadCreation p-grid p-nogutter p-jc-center p-mr-6 p-ml-6">
         <div className="p-col-12 p-md-10 p-fluid">
           <h3>Subject </h3>
           <InputText id="threadName" className="p-field" />
