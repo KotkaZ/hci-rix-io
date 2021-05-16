@@ -79,8 +79,7 @@ export default class Userpopup extends Component {
             label: "Log Out",
             icon: "pi pi-sign-out",
             command: () => {
-              console.log("Logout would happen!");
-              history.push("/userLogout");
+              window.open("https://www.neti.ee/", "_self")
             },
           },
         ],
