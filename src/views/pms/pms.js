@@ -113,7 +113,7 @@ export default class Pms extends Component {
         });
 
         return (
-            <div className="Pm p-grid p-jc-center ">
+            <div className="Pm p-grid p-jc-center p-nogutter">
                 <div className="p-col-12 p-md-9">
                     <div className="chat-header p-d-block p-p-2 p-d-flex p-ai-center"
                          style={{fontSize: 30, verticalAlign: 'center', position: 'sticky', top: 0,}}>

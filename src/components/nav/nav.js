@@ -26,7 +26,7 @@ export default class Nav extends Component {
             <Burger />
           </div>
 
-          <div className="p-col-7 p-xl-4 p-fluid">
+          <div className="p-col-6 p-xl-4 p-fluid">
             <span className="p-input-icon-left p-field p-m-0">
               <i className="pi pi-search" />
               <InputText
@@ -42,7 +42,7 @@ export default class Nav extends Component {
 
           <div className="p-col-4">
             <div className="p-grid vertical-container p-jc-end p-mr-2 p-pt-1 p-ai-center p-nogutter">
-              <h3 className="p-m-0 p-pr-2">Lambi Lõdvik</h3>
+              <h3 className="avatar-name p-m-0 p-pr-2">Lambi Lõdvik</h3>
               <Userpopup />
             </div>
           </div>

@@ -25,7 +25,7 @@ export default class UserProfileOther extends Component {
 
   render() {
     return (
-      <div className="userProfileOther  p-grid p-nogutter">
+      <div className="userProfileOther p-grid p-nogutter">
         <div className="p-col-12 p-p-3 p-grid p-jc-end p-nogutter">
           <Link to="/" className="link">
             <Button

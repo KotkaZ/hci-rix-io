@@ -39,7 +39,7 @@ export default class SingleThreadView extends Component {
         const sortItems = [{name: "Author"}, {name: "Date"}, {name: "Votes"}];
 
         return (
-            <div className="SingleThreadView p-grid p-jc-center">
+            <div className="SingleThreadView p-grid p-jc-center p-nogutter">
                 <div className="p-col-10 p-my-5 p-grid p-jc-between">
                     <div className="p-grid p-my-auto">
             <span className="p-float-label">
