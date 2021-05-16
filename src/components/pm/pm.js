@@ -19,19 +19,12 @@ export default class pm extends Component {
         return (
             <div className="Pm p-d-block">
                 <div className={`message ${this.props.type}-type p-p-3 p-grid p-justify-${this.props.type}`}>
-                    <table>
-                        <tr>
-                            <div className={`message-box p-p-3 p-mb-0 p-shadow-5`}>
-                                <p className={`p-m-0`}> {this.props.text} </p>
-                            </div>
-                        </tr>
-                        <tr>
-                            <p className={`message-datetime p-m-0`}> {this.props.time} {this.props.date}</p>
-                        </tr>
-                    </table>
+                    <div style={{width: '10rem'}} style={{maxWidth: "35vw"}} className="message-box p-p-3 p-mb-0 p-shadow-3 p-flex-wrap">
+                        <p className="p-m-0 p-jc-center">{this.props.text}</p>
+                    </div>
+                    <p className="message-datetime p-col-12"> {this.props.time} {this.props.date}</p>
                 </div>
             </div>
         );
     }
 }
-

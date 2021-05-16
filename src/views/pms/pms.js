@@ -68,6 +68,10 @@ export default class Pms extends Component {
         this.scrollToBottom()
     }
 
+    componentDidMount() {
+        this.scrollToBottom()
+    }
+
     scrollToBottom = () => {
         this.messagesEnd.scrollIntoView({ behavior: "smooth" });
     }
@@ -97,7 +101,7 @@ export default class Pms extends Component {
     render() {
         const dms = this.textMessages.map(dm => {
             return (
-                <div className="p-col-10 p-mb-5">
+                <div className="p-col-12 p-mb-5">
                     <Pm
                         text={dm.text}
                         time={dm.time}
@@ -118,7 +122,7 @@ export default class Pms extends Component {
                         {this.state.chatPartner.name}
                     </div>
                     <div className="messages-box p-d-block p-fluid">
-                        <div className="person-profile p-d-block p-text-center p-m-2" style={{fontSize: 30}}>
+                        <div className="person-profile p-d-block p-text-center p-m-2 p-mb-6" style={{fontSize: 30}}>
                             <img className="p-d-block p-ml-auto p-mr-auto p-shadow-10"
                                  src={this.state.chatPartner.imgSrc}
                                  style={{width: '30%', maxWidth: '400px', height: "auto", borderRadius: "50%"}}

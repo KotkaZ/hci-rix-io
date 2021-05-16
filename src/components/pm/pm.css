@@ -12,12 +12,20 @@ div.message.start-type{
 
 div.message-box {
     border-radius: 25px;
+    width: auto !important;
+
 }
 
 div.message.end-type div.message-box{
     background-color: var(--surface-f);
+
 }
 
 div.message.start-type div.message-box{
     background-color: var(--surface-c);
+
+}
+
+.message-datetime {
+    font-size: 1vh;
 }
