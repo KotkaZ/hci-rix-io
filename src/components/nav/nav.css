@@ -1,10 +1,3 @@
-@media only screen and (max-width: 600px) {
-  .avatar-name {
-    display: none !important;
-  }
-}
-
-
 .Nav {
   background-color: var(--surface-a);
   color: var(--text-color);

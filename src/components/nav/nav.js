@@ -40,11 +40,8 @@ export default class Nav extends Component {
             </span>
           </div>
 
-          <div className="p-col-4">
-            <div className="p-grid vertical-container p-jc-end p-mr-2 p-pt-1 p-ai-center p-nogutter">
-              <h3 className="avatar-name p-m-0 p-pr-2">Lambi Lõdvik</h3>
-              <Userpopup />
-            </div>
+          <div className="p-col-4 p-grid p-jc-end p-nogutter">
+            <Userpopup />
           </div>
         </div>
 

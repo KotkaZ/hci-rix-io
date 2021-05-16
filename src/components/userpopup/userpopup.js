@@ -79,7 +79,7 @@ export default class Userpopup extends Component {
             label: "Log Out",
             icon: "pi pi-sign-out",
             command: () => {
-              window.open("https://www.neti.ee/", "_self")
+              window.open("https://www.neti.ee/", "_self");
             },
           },
         ],
@@ -89,7 +89,13 @@ export default class Userpopup extends Component {
 
   render() {
     return (
-      <div className="UserPopup">
+      <div className="UserPopup p-d-flex p-ai-center">
+        <h3
+          className="avatar-name p-m-0 p-pr-2"
+          onClick={event => this.menu.toggle(event)}
+        >
+          Lambi Lõdvik
+        </h3>
         <Avatar
           shape="circle"
           size="large"
@@ -97,6 +103,7 @@ export default class Userpopup extends Component {
           onClick={event => this.menu.toggle(event)}
           aria-controls="popup_menu"
           aria-haspopup
+          className="p-m-1"
         />
         <Menu
           id="popup_menu"
