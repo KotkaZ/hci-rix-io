@@ -1,14 +1,17 @@
-.Pms{
-    background-color: var(--surface-a);
-    color: var(--text-color);
+.Pms {
+  background-color: var(--surface-a);
+  color: var(--text-color);
 }
 
-.chat-header, .chat-footer {
-    background-color: var(--primary-color);
+.chat-header,
+.chat-footer {
+  background-color: var(--primary-color);
+  color: var(--primary-color-text);
 }
 
 @media only screen and (max-width: 600px) {
-    .star-button, .plus-button {
-        display: none !important;
-    }
+  .star-button,
+  .plus-button {
+    display: none !important;
+  }
 }
