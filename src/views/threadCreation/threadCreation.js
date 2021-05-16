@@ -106,6 +106,11 @@ export default class ThreadCreation extends Component {
             onChange={e => this.setState({ values1: e.value })}
             className="p-mb-3"
             separator=","
+            tooltip="This feature is not supported in prototype!"
+            tooltipOptions={{
+              className: "pink-tooltip",
+              position: "bottom",
+            }}
           />
 
           <h3>Subforum</h3>
@@ -129,6 +134,11 @@ export default class ThreadCreation extends Component {
               className="p-mt-3"
               onClick={e => {
                 this.submitData(this);
+              }}
+              tooltip="This feature is not supported in prototype!"
+              tooltipOptions={{
+                className: "pink-tooltip",
+                position: "bottom",
               }}
             />
             <Link to="/">

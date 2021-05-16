@@ -43,6 +43,11 @@ export default class SingleThreadView extends Component {
                 options={sortItems}
                 onChange={e => this.setState({ selectSort: e.value })}
                 optionLabel="name"
+                tooltip="This feature is not supported in prototype!"
+                tooltipOptions={{
+                  className: "pink-tooltip",
+                  position: "bottom",
+                }}
               />
 
               <label htmlFor="sortby">Sort by</label>

@@ -16,6 +16,7 @@ export default class ThreadsView extends Component {
       basicFirst: 0,
       basicRows: 10,
       selectSort: null,
+      values1: [],
     };
   }
 
@@ -63,6 +64,11 @@ export default class ThreadsView extends Component {
                 onChange={e => this.setState({ values1: e.value })}
                 className="p-mx-2"
                 separator=","
+                tooltip="This feature is not supported in prototype!"
+                tooltipOptions={{
+                  className: "pink-tooltip",
+                  position: "bottom",
+                }}
               />
               <label htmlFor="tags">Filter tags</label>
             </span>
@@ -74,6 +80,11 @@ export default class ThreadsView extends Component {
                 options={sortItems}
                 onChange={e => this.setState({ selectSort: e.value })}
                 optionLabel="name"
+                tooltip="This feature is not supported in prototype!"
+                tooltipOptions={{
+                  className: "pink-tooltip",
+                  position: "bottom",
+                }}
               />
 
               <label htmlFor="sortby">Sort by</label>
