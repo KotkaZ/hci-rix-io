@@ -73,6 +73,9 @@ export default class Pms extends Component {
     }
 
     sendDM (e) {
+        if (e === "") {
+            return
+        }
         let date = new Date();
         this.textMessages.push({
             text: e,
