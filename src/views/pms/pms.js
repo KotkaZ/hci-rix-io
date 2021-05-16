@@ -4,7 +4,6 @@ import {InputText} from 'primereact/inputtext';
 import {Button} from 'primereact/button';
 import React, {Component} from "react";
 import {Avatar} from 'primereact/avatar';
-import ThreadPost from "../../components/threadpost/threadPost";
 
 export default class Pms extends Component {
     constructor(props) {
@@ -16,6 +15,8 @@ export default class Pms extends Component {
                 name: "Unga Punga",
             },
         };
+        this.keyPress = this.keyPress.bind(this);
+        this.ref = React.createRef();
 
         this.textMessages = [
             {
@@ -63,10 +64,31 @@ export default class Pms extends Component {
         ]
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        this.scrollToBottom()
+    }
+
+    scrollToBottom = () => {
+        this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+    }
+
     sendDM (e) {
         let date = new Date();
-        this.textMessages.push({text: e, time: date.getHours()+":"+date.getMinutes(), date: date.toLocaleDateString(), type: "end" })
+        this.textMessages.push({
+            text: e,
+            time: date.getHours() + ":" + date.getUTCDate(),
+            date: date.toLocaleDateString(),
+            type: "end"
+        })
+        this.setState(this.state)
     }
+
+    keyPress(e){
+        if(e.keyCode == 13){
+            this.sendDM(this.ref.current.value)
+        }
+    }
+
 
     render() {
         const dms = this.textMessages.map(dm => {
@@ -108,9 +130,11 @@ export default class Pms extends Component {
 
                             <Button icon="pi pi-star-o" className="p-button-lg p-m-1"/>
                             <Button icon="pi pi-plus" className="p-button-lg p-m-1"/>
-                            <InputText id="in" className="p-col p-d-inline p-m-1" value={this.state.value}
-                                       onChange={(e) => this.setState({value: e.target.value})}/>
-                            <Button icon="pi pi-chevron-right" className="p-button-lg p-m-1" onClick={(e) => this.sendDM(this.state.value)}/>
+                            <InputText id="in" className="p-col p-d-inline p-m-1" ref={this.ref} onKeyDown={this.keyPress}/>
+                            <Button icon="pi pi-chevron-right" className="p-button-lg p-m-1" onClick={(e) => this.sendDM(this.ref.current.value)}/>
+                        </div>
+                        <div style={{ float:"left", clear: "both" }}
+                             ref={(el) => { this.messagesEnd = el; }}>
                         </div>
                     </div>
                 </div>
