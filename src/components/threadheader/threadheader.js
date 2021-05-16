@@ -2,6 +2,7 @@ import "./threadheader.css";
 import React, { Component } from "react";
 import history from "../../history";
 import { Chip } from "primereact/chip";
+import {Button} from "primereact/button";
 
 export default class Threadheader extends Component {
   constructor(props) {
@@ -36,7 +37,23 @@ export default class Threadheader extends Component {
           <div className="p-col-2 p-grid  p-jc-center p-ai-center">
             <h5 className="p-m-0">{this.props.replies} Replies</h5>
             <h5 className="p-m-0">{this.props.views} Views</h5>
+
+            <div className="p-d-flex"><Button
+                icon="pi pi-arrow-up"
+                label={this.props.upvotes}
+                className="p-button-rounded p-button-sm p-button-success p-button-outlined p-mr-2"
+                disabled
+            />
+              <Button
+                  icon="pi pi-arrow-down"
+                  label={this.props.downvotes}
+                  className="p-button-rounded p-button-sm p-button-danger p-button-outlined"
+                  disabled
+              /></div>
+
+
           </div>
+
         </div>
 
         <hr />

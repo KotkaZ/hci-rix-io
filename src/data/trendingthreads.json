@@ -5,7 +5,9 @@
     "replies": "123",
     "views": "123",
     "lastpost": "8/8/8",
-    "lastposter": "Baranka"
+    "lastposter": "Baranka",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -13,7 +15,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -21,7 +25,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -29,7 +35,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -37,7 +45,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -45,7 +55,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -53,7 +65,9 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   },
   {
     "title": "Lorem ipsum",
@@ -61,6 +75,38 @@
     "replies": "100",
     "views": "2000",
     "lastpost": "15/05/2021",
-    "lastposter": "Lorem"
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
+  },
+  {
+    "title": "Lorem ipsum",
+    "author": "Lorem",
+    "replies": "100",
+    "views": "2000",
+    "lastpost": "15/05/2021",
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
+  },
+  {
+    "title": "Lorem ipsum",
+    "author": "Lorem",
+    "replies": "100",
+    "views": "2000",
+    "lastpost": "15/05/2021",
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
+  },
+  {
+    "title": "Lorem ipsum",
+    "author": "Lorem",
+    "replies": "100",
+    "views": "2000",
+    "lastpost": "15/05/2021",
+    "lastposter": "Lorem",
+    "upvotes": 281,
+    "downvotes": 281
   }
 ]
