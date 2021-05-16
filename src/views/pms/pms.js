@@ -113,7 +113,7 @@ export default class Pms extends Component {
         });
 
         return (
-            <div className="Pm p-grid p-jc-center">
+            <div className="Pm p-grid p-jc-center ">
                 <div className="p-col-12 p-md-9">
                     <div className="chat-header p-d-block p-p-2 p-d-flex p-ai-center"
                          style={{fontSize: 30, verticalAlign: 'center', position: 'sticky', top: 0,}}>
@@ -133,11 +133,10 @@ export default class Pms extends Component {
                             {dms}
                         </div>
                     </div>
-                    <div className="chat-footer p-d-block p-p-3" style={{position: 'sticky', bottom: 0,}}>
+                    <div className="chat-footer p-d-block p-p-3" style={{position: 'sticky', bottom: 0}}>
                         <div className="chat-input-field p-jc-center p-ac-center p-grid">
-
-                            <Button icon="pi pi-star-o" className="p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
-                            <Button icon="pi pi-plus" className="p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
+                            <Button icon="pi pi-star-o" className="star-button p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
+                            <Button icon="pi pi-plus" className="plus-button p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
                             <InputText id="in" className="p-col p-d-inline p-m-1" ref={this.ref} onKeyDown={this.keyPress}/>
                             <Button icon="pi pi-chevron-right" className="p-button-lg p-m-1" onClick={(e) => this.sendDM(this.ref.current.value)}/>
                         </div>
