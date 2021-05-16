@@ -37,6 +37,8 @@ export default class ThreadsView extends Component {
       { name: "Replies" },
       { name: "Views" },
       { name: "Votes" },
+      { name: "Upvotes" },
+      { name: "Downvotes" }
     ];
 
     const data = this.props.threads ? this.props.threads : loremipsumthreads;
@@ -52,6 +54,8 @@ export default class ThreadsView extends Component {
           lastpost={thread.lastpost}
           lastposter={thread.lastposter}
           tags={thread.tags}
+          upvotes={thread.upvotes}
+          downvotes={thread.downvotes}
         />
       );
     });
