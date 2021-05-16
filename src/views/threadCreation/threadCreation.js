@@ -12,6 +12,7 @@ export default class ThreadCreation extends Component {
     super(props);
     this.state = {
       selectedNodeKey1: this.props.location,
+      values1: [],
     };
     this.data = [
       {
