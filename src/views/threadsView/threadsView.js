@@ -2,6 +2,7 @@ import { Paginator } from "primereact/paginator";
 import { Button } from "primereact/button";
 import { Chips } from "primereact/chips";
 import { Dropdown } from "primereact/dropdown";
+import { Toast } from "primereact/toast";
 
 import React, { Component } from "react";
 import Threadheader from "../../components/threadheader/threadheader";
@@ -18,6 +19,7 @@ export default class ThreadsView extends Component {
       selectSort: null,
       values1: [],
     };
+    this.toast = React.createRef();
   }
 
   onBasicPageChange(event) {
@@ -38,6 +40,7 @@ export default class ThreadsView extends Component {
     ];
 
     const data = this.props.threads ? this.props.threads : loremipsumthreads;
+    if (this.props.newThread) data.push(this.props.newThread);
     const threads = data.map(thread => {
       return (
         <Threadheader
@@ -55,6 +58,8 @@ export default class ThreadsView extends Component {
 
     return (
       <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
+        <Toast ref={this.toast} />
+
         <div className="p-col-10 p-pt-4 p-grid p-jc-between">
           <div className="p-grid p-my-auto">
             <span className="p-float-label">
@@ -94,7 +99,12 @@ export default class ThreadsView extends Component {
             icon="pi pi-plus"
             label="Create a thread"
             className="p-my-auto p-button-raised p-button-text"
-            onClick={() => history.push("/threadCreation")}
+            onClick={() =>
+              history.push({
+                pathname: "/threadCreation",
+                state: { location: history.location.pathname },
+              })
+            }
           />
         </div>
 

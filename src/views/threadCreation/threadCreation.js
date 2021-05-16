@@ -5,7 +5,8 @@ import { Editor } from "primereact/editor";
 import { Button } from "primereact/button";
 import { Chips } from "primereact/chips";
 import { TreeSelect } from "primereact/treeselect";
-import { Link } from "react-router-dom";
+import treevalues from "../../data/treeselect.json";
+import history from "../../history";
 
 export default class ThreadCreation extends Component {
   constructor(props) {
@@ -14,77 +15,11 @@ export default class ThreadCreation extends Component {
       selectedNodeKey1: this.props.location,
       values1: [],
     };
-    this.data = [
-      {
-        key: "0",
-        label: "Software Development",
-        icon: "pi pi-desktop",
-        children: [
-          {
-            key: "0-0",
-            label: "placeholder1",
-          },
-          {
-            key: "0-1",
-            label: "placeholder2",
-          },
-        ],
-      },
-      {
-        key: "1",
-        label: "Hardware",
-        icon: "pi pi-cog",
-        children: [
-          {
-            key: "1-0",
-            label: "placeholder3",
-          },
-          {
-            key: "1-1",
-            label: "placeholder4",
-          },
-          {
-            key: "1-2",
-            label: "placeholder5",
-          },
-        ],
-      },
-      {
-        key: "2",
-        label: "Market",
-        icon: "pi pi-money-bill",
-        children: [
-          {
-            key: "2-0",
-            label: "placeholder6",
-          },
-          {
-            key: "2-1",
-            label: "placeholder7",
-          },
-        ],
-      },
-      {
-        key: "3",
-        label: "Jobs / Career",
-        icon: "pi pi-briefcase",
-        children: [
-          {
-            key: "3-0",
-            label: "placeholder8",
-          },
-          {
-            key: "3-1",
-            label: "placeholder9",
-          },
-        ],
-      },
-    ];
+    this.data = treevalues;
   }
 
   submitData(e) {
-    let subforum = e.state.selectedNodeKey1;
-    console.log("Submitted!", { subforum: subforum });
+    history.goBack();
   }
 
   render() {
@@ -119,7 +54,8 @@ export default class ThreadCreation extends Component {
             value={this.state.selectedNodeKey1}
             options={this.data}
             onChange={e => {
-              if (e.value.length > 1) {
+              console.log(e.value);
+              if (e.value.length > 3) {
                 this.setState({ selectedNodeKey1: e.value });
               } else {
                 this.setState({ selectedNodeKey1: undefined });
@@ -136,19 +72,13 @@ export default class ThreadCreation extends Component {
               onClick={e => {
                 this.submitData(this);
               }}
-              tooltip="This feature is not supported in prototype!"
-              tooltipOptions={{
-                className: "pink-tooltip",
-                position: "bottom",
-              }}
             />
-            <Link to="/">
-              <Button
-                label="Cancel"
-                loadingoptions={{ position: "right" }}
-                className="p-button-secondary p-mt-3 p-mb-4"
-              />
-            </Link>
+            <Button
+              label="Cancel"
+              loadingoptions={{ position: "right" }}
+              className="p-button-secondary p-mt-3 p-mb-4"
+              onClick={e => history.goBack()}
+            />
           </div>
         </div>
       </div>
