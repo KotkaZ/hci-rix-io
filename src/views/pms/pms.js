@@ -81,6 +81,7 @@ export default class Pms extends Component {
             type: "end"
         })
         this.setState(this.state)
+        this.ref.current.value = ""
     }
 
     keyPress(e){
@@ -128,8 +129,8 @@ export default class Pms extends Component {
                     <div className="chat-footer p-d-block p-p-3" style={{position: 'sticky', bottom: 0,}}>
                         <div className="chat-input-field p-jc-center p-ac-center p-grid">
 
-                            <Button icon="pi pi-star-o" className="p-button-lg p-m-1"/>
-                            <Button icon="pi pi-plus" className="p-button-lg p-m-1"/>
+                            <Button icon="pi pi-star-o" className="p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
+                            <Button icon="pi pi-plus" className="p-button-lg p-m-1" tooltip="This feature is not supported in prototype!"/>
                             <InputText id="in" className="p-col p-d-inline p-m-1" ref={this.ref} onKeyDown={this.keyPress}/>
                             <Button icon="pi pi-chevron-right" className="p-button-lg p-m-1" onClick={(e) => this.sendDM(this.ref.current.value)}/>
                         </div>
