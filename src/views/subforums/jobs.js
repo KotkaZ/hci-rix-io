@@ -5,7 +5,11 @@ import data from "../../data/jobs.json";
 export default class Jobs extends Component {
   render() {
     const groups = data.map(data => {
-      return <Threadgroup title={data.title} threads={data.threads} />;
+      return (
+        <div className="p-mb-6 p-shadow-8">
+          <Threadgroup title={data.title} threads={data.threads} />
+        </div>
+      );
     });
 
     return (
