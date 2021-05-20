@@ -72,7 +72,7 @@ export default class ListPmsView extends Component {
     }
 
     return (
-      <div className="ListPmsView p-grid p-justify-center p-nogutter">
+      <div className="ListPmsView p-grid p-py-6 p-justify-center p-nogutter">
         <div className={"p-col-12 p-md-9"}>{items}</div>
       </div>
     );
