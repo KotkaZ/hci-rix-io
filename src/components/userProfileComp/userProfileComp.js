@@ -39,6 +39,8 @@ export default class UserProfileComp extends Component {
       { name: "Japan", code: "JP" },
       { name: "Spain", code: "ES" },
       { name: "United States", code: "US" },
+      { name: "Kazakhstan", code: "KZ" },
+      { name: "Estonia", code: "EE" },
     ];
   }
 
@@ -53,7 +55,7 @@ export default class UserProfileComp extends Component {
   selectedCountryTemplate(option, props) {
     if (option) {
       return (
-        <div className="country-item country-item-value">
+        <div className="country-item country-item-value p-d-flex p-ai-center">
           <img
             alt={option.name}
             src={`https://www.countryflags.io/${option.code}/flat/32.png`}
@@ -61,7 +63,7 @@ export default class UserProfileComp extends Component {
               (e.target.src =
                 "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
             }
-            className={`flag flag-${option.code.toLowerCase()}`}
+            className={`flag flag-${option.code.toLowerCase()} p-mr-2`}
           />
           <div>{option.name}</div>
         </div>
@@ -73,7 +75,7 @@ export default class UserProfileComp extends Component {
 
   countryOptionTemplate(option) {
     return (
-      <div className="country-item">
+      <div className="country-item p-d-flex p-ai-center">
         <img
           alt={option.name}
           src={`https://www.countryflags.io/${option.code}/flat/32.png`}
@@ -81,7 +83,7 @@ export default class UserProfileComp extends Component {
             (e.target.src =
               "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
           }
-          className={`flag flag-${option.code.toLowerCase()}`}
+          className={`flag flag-${option.code.toLowerCase()} p-mr-2`}
         />
         <div>{option.name}</div>
       </div>

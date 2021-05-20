@@ -9,17 +9,17 @@ export default class UserProfileOther extends Component {
     super(props);
     this.profileInfo = {
       picture:
-        "https://www.thesprucepets.com/thmb/SoEKsH51vUGvtm9keZgDTaDmJgA=/1328x1328/smart/filters:no_upscale()/GettyImages-157563721-581674ad5f9b581c0b41e537.jpg",
-      nickname: "Phil",
-      desc: "Just your friendly neighbourhood Phil",
-      educ: "Monsters High",
+        "https://cdn.pixabay.com/photo/2017/06/13/12/53/profile-2398782_1280.png",
+      nickname: "Lorem",
+      desc: "Lorem Ipsum",
+      educ: "Lorem High",
       country: { name: "Brazil", code: "BR" },
-      gender: { name: "Male" },
-      age: "32",
+      gender: { name: "Female" },
+      age: "50",
       regDate: new Date("December 17, 2019 03:24:00"),
-      numberOfPosts: 55,
-      upvotes: 1224,
-      downvotes: 41,
+      numberOfPosts: 100,
+      upvotes: 50,
+      downvotes: 50,
     };
   }
 

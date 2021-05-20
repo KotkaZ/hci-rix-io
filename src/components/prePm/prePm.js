@@ -31,10 +31,10 @@ export default class PrePm extends Component {
 
   render() {
     return (
-      <div className="PrePm p-d-block">
+      <div className="PrePm">
         <Link className="link" to="/Unga_Punga">
           <div
-            className={`p-grid p-jc-between p-ai-center p-shadow-${this.state.isHover}`}
+            className={`p-grid p-nogutter p-jc-between p-ai-center p-shadow-${this.state.isHover}`}
             style={{ verticalAlign: "center" }}
             onMouseEnter={this.hoverStart}
             onMouseLeave={this.hoverEnd}
