@@ -154,6 +154,11 @@ export default class UserProfileComp extends Component {
                   onClick={() => {
                     this.toggleDisabled("nickDisabled", true);
                   }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
+                  }}
                 />
               )}
 
@@ -187,6 +192,11 @@ export default class UserProfileComp extends Component {
                   className="p-button-rounded p-button-text"
                   onClick={() => {
                     this.toggleDisabled("descDisabled", true);
+                  }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
                   }}
                 />
               )}
@@ -225,6 +235,11 @@ export default class UserProfileComp extends Component {
                   onClick={() => {
                     this.toggleDisabled("educDisabled", true);
                   }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
+                  }}
                 />
               )}
 
@@ -262,6 +277,11 @@ export default class UserProfileComp extends Component {
                   className="p-button-rounded p-button-text"
                   onClick={() => {
                     this.toggleDisabled("countryDisabled", true);
+                  }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
                   }}
                 />
               )}
