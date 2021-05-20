@@ -24,13 +24,12 @@ export default class ThreadPost extends Component {
         const header = (
             <div className="p-grid p-jc-between ">
 
-                <Link className="link p-d-flex p-ml-4 p-mr-0" to="/userProfileOther">
+                <Link className="link p-d-flex p-ml-4 p-mr-0" to={this.props.profileLink}>
                     <Avatar
                         image={this.props.avatar}
                         size="large"
                         shape="circle"
                         className="p-mt-3"
-                        onClick={() => history.push("/userProfileOther")}
                     />
 
                     <div className="p-ml-2 p-mt-3">

@@ -27,6 +27,7 @@ export default class SingleThreadView extends Component {
                         date={post.date}
                         threadname={post.threadname}
                         threadcontent={post.threadcontent}
+                        profileLink={post.profileLink}
                     />
                 </div>
             );
