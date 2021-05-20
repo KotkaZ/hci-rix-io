@@ -10,51 +10,21 @@ export default class Userpopup extends Component {
     super(props);
     this.state = {
       darkMode: false,
-      stylePath: "~primereact/resources/themes/saga-blue/theme.css",
     };
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
-    var head = document.getElementsByTagName('head')[0];
-    var scripts = head.getElementsByTagName('script')
-
-    for (var i = scripts.length-1; scripts.length>0; i--) {
-      scripts[i].remove()
-      console.log(scripts)
-    }
-
-    console.log(scripts)
     if (prevState.darkMode !== this.state.darkMode) {
-      if (!this.state.darkMode) {
-        //ligthmode
-        document.querySelectorAll("style").forEach(item => {
-          if (item.innerText.length === 557260) {
-            item.remove();
-          }
-          //console.log(item.innerText.length);
-        });
-        import("primereact/resources/themes/saga-blue/theme.css");
-        console.log("Changed to light mode!");
-      } else {
-        //darkmode
-        document.querySelectorAll("style").forEach(item => {
-          if (item.innerText.length === 1) {
-            //make it delete dark scheme vela blue
-            item.remove();
-
-          }
-          //console.log(item.innerText.length);
-        });
-        import("primereact/resources/themes/luna-blue/theme.css");
-        console.log("Changed to dark mode!");
-      }
-      console.log("darkmode status:", this.state.darkMode);
+      //darkmode
+      import("primereact/resources/themes/luna-blue/theme.css");
+      console.log("Changed to dark mode!");
     }
+    console.log("darkmode status:", this.state.darkMode);
   }
 
   items() {
     return [
       {
-        label: "Lambi Lõdvik",
+        label: "John Doe",
         items: [
           {
             label: "Profile",
@@ -70,7 +40,14 @@ export default class Userpopup extends Component {
             label: (
               <div className="p-d-flex p-ai-center">
                 <span className="p-mr-2">Dark Mode</span>
-                <InputSwitch checked={this.state.darkMode} />
+                <InputSwitch
+                  checked={this.state.darkMode}
+                  tooltip="WARNING: Once you go dark mode, you never go back!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "left",
+                  }}
+                />
               </div>
             ),
             icon: "pi pi-moon",
@@ -100,7 +77,7 @@ export default class Userpopup extends Component {
           className="avatar-name p-m-0 p-pr-2"
           onClick={event => this.menu.toggle(event)}
         >
-          Lambi Lõdvik
+          John Doe
         </h3>
         <Avatar
           shape="circle"
@@ -122,6 +99,6 @@ export default class Userpopup extends Component {
   }
 
   changeDarkmode() {
-    this.setState({ darkMode: !this.state.darkMode });
+    this.setState({ darkMode: true });
   }
 }

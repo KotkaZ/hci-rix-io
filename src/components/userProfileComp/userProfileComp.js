@@ -19,7 +19,7 @@ export default class UserProfileComp extends Component {
       nickname: "Lõdvik",
       desc: "lore ipsum...",
       educ: "Random inc Highschool",
-      country: { name: "Spain", code: "ES" },
+      country: { name: "Colombia", code: "CO" },
       gender: { name: "Male" },
       age: 25,
       regDate: new Date("December 17, 2020 03:24:00"),
@@ -32,15 +32,17 @@ export default class UserProfileComp extends Component {
       { name: "Australia", code: "AU" },
       { name: "Brazil", code: "BR" },
       { name: "China", code: "CN" },
+      { name: "Colombia", code: "CO" },
       { name: "Egypt", code: "EG" },
+      { name: "Estonia", code: "EE" },
       { name: "France", code: "FR" },
       { name: "Germany", code: "DE" },
       { name: "India", code: "IN" },
-      { name: "Japan", code: "JP" },
+      { name: "Nepal", code: "NP" },
+      { name: "Kazakhstan", code: "KZ" },
       { name: "Spain", code: "ES" },
       { name: "United States", code: "US" },
-      { name: "Kazakhstan", code: "KZ" },
-      { name: "Estonia", code: "EE" },
+
     ];
   }
 
@@ -58,7 +60,7 @@ export default class UserProfileComp extends Component {
         <div className="country-item country-item-value p-d-flex p-ai-center">
           <img
             alt={option.name}
-            src={`https://www.countryflags.io/${option.code}/flat/32.png`}
+            src={`https://www.countryflags.io/${option.code}/flat/64.png`}
             onError={e =>
               (e.target.src =
                 "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
@@ -152,6 +154,11 @@ export default class UserProfileComp extends Component {
                   onClick={() => {
                     this.toggleDisabled("nickDisabled", true);
                   }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
+                  }}
                 />
               )}
 
@@ -185,6 +192,11 @@ export default class UserProfileComp extends Component {
                   className="p-button-rounded p-button-text"
                   onClick={() => {
                     this.toggleDisabled("descDisabled", true);
+                  }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
                   }}
                 />
               )}
@@ -223,6 +235,11 @@ export default class UserProfileComp extends Component {
                   onClick={() => {
                     this.toggleDisabled("educDisabled", true);
                   }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
+                  }}
                 />
               )}
 
@@ -260,6 +277,11 @@ export default class UserProfileComp extends Component {
                   className="p-button-rounded p-button-text"
                   onClick={() => {
                     this.toggleDisabled("countryDisabled", true);
+                  }}
+                  tooltip="This feature is not supported in prototype!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "bottom",
                   }}
                 />
               )}
