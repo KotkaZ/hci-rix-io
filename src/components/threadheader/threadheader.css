@@ -1,4 +1,6 @@
 .Threadheader {
   background-color: var(--surface-a);
   color: var(--text-color);
+  cursor: pointer;
+  margin-bottom: 1px;
 }

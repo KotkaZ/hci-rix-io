@@ -38,7 +38,7 @@ export default class ThreadsView extends Component {
       { name: "Views" },
       { name: "Votes" },
       { name: "Upvotes" },
-      { name: "Downvotes" }
+      { name: "Downvotes" },
     ];
 
     const data = this.props.threads ? this.props.threads : loremipsumthreads;
@@ -61,7 +61,7 @@ export default class ThreadsView extends Component {
     });
 
     return (
-      <div className="ThreadsView p-grid nested-grid p-jc-center p-nogutter">
+      <div className="ThreadsView p-mt-2 p-grid nested-grid p-jc-center p-nogutter">
         <Toast ref={this.toast} />
 
         <div className="p-col-10 p-pt-4 p-grid p-jc-between">
@@ -112,14 +112,14 @@ export default class ThreadsView extends Component {
           />
         </div>
 
-        <div className="p-col-10">
+        <div className="p-col-10 p-mt-3">
           {threads.slice(
             this.state.basicFirst,
             this.state.basicFirst + this.state.basicRows
           )}
         </div>
         <Paginator
-          className="p-col-10 p-mb-0 p-mt-auto"
+          className="p-col-10 p-py-3"
           first={this.state.basicFirst}
           rows={this.state.basicRows}
           totalRecords={threads.length}

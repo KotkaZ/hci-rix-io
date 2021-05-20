@@ -1,3 +1,4 @@
 .p-card-content {
   background-color: var(--surface-b);
+  padding: 0 !important;
 }
