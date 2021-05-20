@@ -4,8 +4,7 @@ import {Avatar} from "primereact/avatar";
 import {Card} from "primereact/card";
 import {Button} from "primereact/button";
 import history from "../../history";
-import {ConfirmPopup, confirmPopup} from 'primereact/confirmpopup';
-import {Toast} from 'primereact/toast';
+import {ConfirmPopup} from 'primereact/confirmpopup';
 import {Link} from "react-router-dom";
 
 export default class ThreadPost extends Component {
