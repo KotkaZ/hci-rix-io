@@ -60,7 +60,7 @@ export default class UserProfileComp extends Component {
         <div className="country-item country-item-value p-d-flex p-ai-center">
           <img
             alt={option.name}
-            src={`https://www.countryflags.io/${option.code}/flat/32.png`}
+            src={`https://www.countryflags.io/${option.code}/flat/64.png`}
             onError={e =>
               (e.target.src =
                 "https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png")
