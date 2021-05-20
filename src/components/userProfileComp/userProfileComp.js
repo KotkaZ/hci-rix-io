@@ -16,7 +16,7 @@ export default class UserProfileComp extends Component {
       countryDisabled: true,
       genderDisabled: true,
       ageDisabled: true,
-      nickname: "Lõdvik",
+      nickname: "John Doe",
       desc: "lore ipsum...",
       educ: "Random inc Highschool",
       country: { name: "Colombia", code: "CO" },
