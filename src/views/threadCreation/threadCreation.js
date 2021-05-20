@@ -6,7 +6,6 @@ import { Button } from "primereact/button";
 import { Chips } from "primereact/chips";
 import { TreeSelect } from "primereact/treeselect";
 import { Messages } from "primereact/messages";
-import { Message } from "primereact/message";
 import treevalues from "../../data/treeselect.json";
 import history from "../../history";
 
