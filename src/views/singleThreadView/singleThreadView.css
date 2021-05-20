@@ -1,100 +1,120 @@
 .Upvote {
-    color: black;
+  color: black;
 }
 
 .p-button {
-     margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .p-buttonset .p-button {
-    margin-right: 0;
+  margin-right: 0;
 }
 .p-button i {
-    line-height: 2.25rem;
+  line-height: 2.25rem;
 }
 
 .p-button.facebook {
-    background: linear-gradient(to left, var(--indigo-600) 50%, var(--indigo-700) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: background-position 0.5s ease-out;
-    color: #fff;
-    border-color: var(--indigo-700);
+  background: linear-gradient(
+    to left,
+    var(--indigo-600) 50%,
+    var(--indigo-700) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-out;
+  color: #fff;
+  border-color: var(--indigo-700);
 }
 .p-button.facebook:hover {
-    background-position: left bottom;
-    background-color: var(--indigo-700)!important
+  background-position: left bottom;
+  background-color: var(--indigo-700) !important;
 }
 .p-button.facebook i {
-    background-color: var(--indigo-700);
+  background-color: var(--indigo-700);
 }
 .p-button.facebook:focus {
-    box-shadow: 0 0 0 1px var(--indigo-400);
+  box-shadow: 0 0 0 1px var(--indigo-400);
 }
 .p-button.twitter {
-    background: linear-gradient(to left, var(--blue-400) 50%, var(--blue-500) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: background-position 0.5s ease-out;
-    color: #fff;
-    border-color: var(--blue-500);
+  background: linear-gradient(
+    to left,
+    var(--blue-400) 50%,
+    var(--blue-500) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-out;
+  color: #fff;
+  border-color: var(--blue-500);
 }
 .p-button.twitter:hover {
-    background-position: left bottom;
-    background-color: var(--blue-500)!important;
+  background-position: left bottom;
+  background-color: var(--blue-500) !important;
 }
 .p-button.twitter i {
-    background-color: var(--blue-500);
+  background-color: var(--blue-500);
 }
 .p-button.twitter:focus {
-    box-shadow: 0 0 0 1px var(--blue-200);
+  box-shadow: 0 0 0 1px var(--blue-200);
 }
 .p-button.slack {
-    background: linear-gradient(to left, var(--orange-400) 50%, var(--orange-500) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: background-position 0.5s ease-out;
-    color: #fff;
-    border-color: var(--orange-500);
+  background: linear-gradient(
+    to left,
+    var(--orange-400) 50%,
+    var(--orange-500) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-out;
+  color: #fff;
+  border-color: var(--orange-500);
 }
 .p-button.slack:hover {
-    background-position: left bottom;
-    background-color: var(--orange-500)!important;
+  background-position: left bottom;
+  background-color: var(--orange-500) !important;
 }
 .p-button.slack i {
-    background-color: var(--orange-500);
+  background-color: var(--orange-500);
 }
 .p-button.slack:focus {
-    box-shadow: 0 0 0 1px var(--orange-200);
+  box-shadow: 0 0 0 1px var(--orange-200);
 }
 
 .p-button.discord {
-    background: linear-gradient(to left, var(--bluegray-700) 50%, var(--bluegray-800) 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: background-position 0.5s ease-out;
-    color: #fff;
-    border-color: var(--bluegray-800);
+  background: linear-gradient(
+    to left,
+    var(--bluegray-700) 50%,
+    var(--bluegray-800) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.5s ease-out;
+  color: #fff;
+  border-color: var(--bluegray-800);
 }
 .p-button.discord:hover {
-    background-position: left bottom;
-    background-color: var(--bluegray-800)!important;
+  background-position: left bottom;
+  background-color: var(--bluegray-800) !important;
 }
 .p-button.discord i {
-    background-color: var(--bluegray-800);
+  background-color: var(--bluegray-800);
 }
 .p-button.discord:focus {
-    box-shadow: 0 0 0 1px var(--bluegray-500);
+  box-shadow: 0 0 0 1px var(--bluegray-500);
 }
 @media screen and (max-width: 960px) {
-    .p-button {
-        margin-bottom: 0.5rem;
-    }
-    .p-button:not(.p-button-icon-only) {
-        display: flex;
-        width: 100%;
-    }
-    .p-buttonset .p-button {
-        margin-bottom: 0;
-    }
+  .p-button {
+    margin-bottom: 0.5rem;
+  }
+  .p-button:not(.p-button-icon-only) {
+    display: flex;
+    width: 100%;
+  }
+  .p-buttonset .p-button {
+    margin-bottom: 0;
+  }
+}
+
+.inputtext_value {
+  min-height: 200px !important;
 }
