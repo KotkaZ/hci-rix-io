@@ -38,7 +38,7 @@ export default class UserProfileComp extends Component {
       { name: "France", code: "FR" },
       { name: "Germany", code: "DE" },
       { name: "India", code: "IN" },
-      { name: "Japan", code: "JP" },
+      { name: "Nepal", code: "NP" },
       { name: "Kazakhstan", code: "KZ" },
       { name: "Spain", code: "ES" },
       { name: "United States", code: "US" },
