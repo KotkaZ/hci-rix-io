@@ -5,6 +5,8 @@ import { Editor } from "primereact/editor";
 import { Button } from "primereact/button";
 import { Chips } from "primereact/chips";
 import { TreeSelect } from "primereact/treeselect";
+import { Messages } from "primereact/messages";
+import { Message } from "primereact/message";
 import treevalues from "../../data/treeselect.json";
 import history from "../../history";
 
@@ -16,6 +18,18 @@ export default class ThreadCreation extends Component {
       values1: [],
     };
     this.data = treevalues;
+  }
+
+  componentDidMount() {
+    this.msgs1.show([
+      {
+        severity: "warn",
+        summary: "Warning",
+        detail:
+          "Location selection is not prefilled in prototype. In real product, users do not have to change location, if they have navigated to proper subforum.",
+        sticky: true,
+      },
+    ]);
   }
 
   submitData(e) {
@@ -50,6 +64,7 @@ export default class ThreadCreation extends Component {
           />
 
           <h3>Subforum</h3>
+          <Messages ref={el => (this.msgs1 = el)} />
           <TreeSelect
             value={this.state.selectedNodeKey1}
             options={this.data}
