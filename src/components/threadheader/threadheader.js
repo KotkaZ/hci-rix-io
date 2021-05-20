@@ -45,19 +45,21 @@ export default class Threadheader extends Component {
           </div>
           <div className="p-col-5 p-d-flex p-ai-center">{tags}</div>
           <div className="p-col-1 p-d-flex p-flex-column p-ai-center p-jc-center">
-            <h5 className="p-m-0 p-pb-1">{this.props.replies} Replies</h5>
-            <h5 className="p-m-0 p-pt-1">{this.props.views} Views</h5>
+            <h5 className="p-my-2">{this.props.replies} Replies</h5>
+            <h5 className="p-my-2">{this.props.views} Views</h5>
           </div>
           <div className="p-col-1 p-d-flex p-flex-column p-ai-center p-jc-center">
             <Button
               icon="pi pi-arrow-up p-p-0 p-m-0"
               label={this.props.upvotes}
-              className="p-button-text p-button-success"
+              className="vote-button p-button-text p-button-success"
+              disabled
             />
             <Button
               icon="pi pi-arrow-down p-p-0 p-m-0"
               label={this.props.downvotes}
-              className="p-button-text p-button-danger"
+              className="vote-button p-button-text p-button-danger"
+              disabled
             />
           </div>
         </div>
