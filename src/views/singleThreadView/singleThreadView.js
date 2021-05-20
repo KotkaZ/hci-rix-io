@@ -4,15 +4,26 @@ import loremipsumposts from "../../data/loremipsumposts.json";
 import ThreadPost from "../../components/threadpost/threadPost";
 import {Dropdown} from "primereact/dropdown";
 import {Button} from "primereact/button";
+import {Dialog} from 'primereact/dialog';
+import {InputTextarea} from 'primereact/inputtextarea';
 import history from "../../history";
 
 export default class SingleThreadView extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectSort: null
+            value1: '',
+            selectSort: null,
+            displayMaximizable: false,
         };
-
+    }
+    renderFooter(name) {
+        return (
+            <div>
+                <Button label="Discard" icon="pi pi-times" onClick={() => {this.setState({displayMaximizable: false})}} className="p-button-text"/>
+                <Button label="Reply" icon="pi pi-check" onClick={() => {this.setState({displayMaximizable: false})}} autoFocus/>
+            </div>
+        );
     }
 
     render() {
@@ -56,16 +67,15 @@ export default class SingleThreadView extends Component {
             </span>
 
                     </div>
-
-
-
-
                     <Button
                         icon="pi pi-plus"
                         label="Reply"
                         className="p-my-auto p-button-raised p-button-text"
-                        onClick={() => history.push("/threadCreation")}
+                        onClick={() => {this.setState({displayMaximizable: true})}}
                     />
+                    <Dialog header="Reply" className= {`p-grid`} visible={this.state.displayMaximizable} maximizable modal style={{ width: '50vw' }} footer={this.renderFooter('displayMaximizable')} onHide={() => {this.setState({displayMaximizable: false})}}>
+                        <InputTextarea className={`p-col-12`} value={this.state.value1} onChange={(e) => this.setState({value1: e.target.value})} autoResize />
+                    </Dialog>
                 </div>
 
                 {posts}
