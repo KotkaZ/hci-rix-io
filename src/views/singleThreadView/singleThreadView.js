@@ -6,7 +6,6 @@ import {Dropdown} from "primereact/dropdown";
 import {Button} from "primereact/button";
 import {Dialog} from 'primereact/dialog';
 import {InputTextarea} from 'primereact/inputtextarea';
-import history from "../../history";
 
 export default class SingleThreadView extends Component {
     constructor(props) {
