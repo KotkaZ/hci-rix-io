@@ -9,7 +9,7 @@ export default class UserSettingsComp extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: "lõdvik-lambi@lamp.ee",
+            email: "john_doe@random.com",
             password: "epiclamp",
             checked1: false,
             checked2: true,
@@ -117,7 +117,7 @@ export default class UserSettingsComp extends Component {
                     <div className="p-col-10">
                         <h2>User Settings</h2>
                         <hr/>
-                        <p id="underlineP" onClick={() => this.onClick("displayEmail")}>
+                        <p id="underlineP" onClick={() => this.onClick("displayEmail")} >
                             Change your email
                         </p>
                         <p id="underlineP" onClick={() => this.onClick("displayPassword")}>
@@ -141,6 +141,11 @@ export default class UserSettingsComp extends Component {
                                 <InputSwitch
                                     checked={this.state.checked1}
                                     onChange={e => this.setState({checked1: e.value})}
+                                    tooltip="This feature is not supported in prototype!"
+                                    tooltipOptions={{
+                                        className: "pink-tooltip",
+                                        position: "bottom",
+                                    }}
                                 />
                             </div>
                         </div>
@@ -156,6 +161,11 @@ export default class UserSettingsComp extends Component {
                                 <InputSwitch
                                     checked={this.state.checked2}
                                     onChange={e => this.setState({checked2: e.value})}
+                                    tooltip="This feature is not supported in prototype!"
+                                    tooltipOptions={{
+                                        className: "pink-tooltip",
+                                        position: "bottom",
+                                    }}
                                 />
                             </div>
                         </div>
@@ -174,6 +184,11 @@ export default class UserSettingsComp extends Component {
                                 <InputSwitch
                                     checked={this.state.checked3}
                                     onChange={e => this.setState({checked3: e.value})}
+                                    tooltip="This feature is not supported in prototype!"
+                                    tooltipOptions={{
+                                        className: "pink-tooltip",
+                                        position: "bottom",
+                                    }}
                                 />
                             </div>
                         </div>
@@ -189,6 +204,11 @@ export default class UserSettingsComp extends Component {
                                 <InputSwitch
                                     checked={this.state.checked4}
                                     onChange={e => this.setState({checked4: e.value})}
+                                    tooltip="This feature is not supported in prototype!"
+                                    tooltipOptions={{
+                                        className: "pink-tooltip",
+                                        position: "bottom",
+                                    }}
                                 />
                             </div>
                         </div>
