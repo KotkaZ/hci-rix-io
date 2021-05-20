@@ -14,6 +14,15 @@ export default class Userpopup extends Component {
     };
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
+    var head = document.getElementsByTagName('head')[0];
+    var scripts = head.getElementsByTagName('script')
+
+    for (var i = scripts.length-1; scripts.length>0; i--) {
+      scripts[i].remove()
+      console.log(scripts)
+    }
+
+    console.log(scripts)
     if (prevState.darkMode !== this.state.darkMode) {
       if (!this.state.darkMode) {
         //ligthmode
@@ -21,25 +30,22 @@ export default class Userpopup extends Component {
           if (item.innerText.length === 557260) {
             item.remove();
           }
-          console.log(item.innerText.length);
+          //console.log(item.innerText.length);
         });
         import("primereact/resources/themes/saga-blue/theme.css");
-        this.stylePath = "primereact/resources/themes/saga-blue/theme.css";
         console.log("Changed to light mode!");
-        console.log(this.stylePath);
       } else {
         //darkmode
         document.querySelectorAll("style").forEach(item => {
           if (item.innerText.length === 1) {
             //make it delete dark scheme vela blue
             item.remove();
+
           }
-          console.log(item.innerText.length);
+          //console.log(item.innerText.length);
         });
-        import("primereact/resources/themes/luna-amber/theme.css");
-        this.stylePath = "primereact/resources/themes/vela-blue/theme.css";
+        import("primereact/resources/themes/luna-blue/theme.css");
         console.log("Changed to dark mode!");
-        console.log(this.stylePath);
       }
       console.log("darkmode status:", this.state.darkMode);
     }
