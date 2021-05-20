@@ -14,13 +14,12 @@ export default class Userpopup extends Component {
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevState.darkMode !== this.state.darkMode) {
-        //darkmode
-        import("primereact/resources/themes/luna-blue/theme.css");
-        console.log("Changed to dark mode!");
-      }
-      console.log("darkmode status:", this.state.darkMode);
+      //darkmode
+      import("primereact/resources/themes/luna-blue/theme.css");
+      console.log("Changed to dark mode!");
     }
-
+    console.log("darkmode status:", this.state.darkMode);
+  }
 
   items() {
     return [
@@ -40,10 +39,15 @@ export default class Userpopup extends Component {
           {
             label: (
               <div className="p-d-flex p-ai-center">
-                <span className="p-mr-2" >Dark Mode</span>
+                <span className="p-mr-2">Dark Mode</span>
                 <InputSwitch
-                    checked={this.state.darkMode}
-                    tooltip="WARNING: Once you go dark mode, you never go back!"/>
+                  checked={this.state.darkMode}
+                  tooltip="WARNING: Once you go dark mode, you never go back!"
+                  tooltipOptions={{
+                    className: "pink-tooltip",
+                    position: "left",
+                  }}
+                />
               </div>
             ),
             icon: "pi pi-moon",
