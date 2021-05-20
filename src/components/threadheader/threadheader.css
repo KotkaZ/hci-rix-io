@@ -4,3 +4,8 @@
   cursor: pointer;
   margin-bottom: 1px;
 }
+
+.p-disabled,
+.p-component:disabled {
+  opacity: 1 !important;
+}
