@@ -3,7 +3,6 @@ import React, {Component} from "react";
 import {Avatar} from "primereact/avatar";
 import {Card} from "primereact/card";
 import {Button} from "primereact/button";
-import history from "../../history";
 import {ConfirmPopup} from 'primereact/confirmpopup';
 import {Link} from "react-router-dom";
 
