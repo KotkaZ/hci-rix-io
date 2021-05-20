@@ -5,8 +5,6 @@ import ThreadPost from "../../components/threadpost/threadPost";
 import {Dropdown} from "primereact/dropdown";
 import {Button} from "primereact/button";
 import history from "../../history";
-import { ConfirmPopup, confirmPopup } from 'primereact/confirmpopup';
-import { Toast } from 'primereact/toast';
 
 export default class SingleThreadView extends Component {
     constructor(props) {
@@ -16,8 +14,6 @@ export default class SingleThreadView extends Component {
         };
 
     }
-
-
 
     render() {
         const data = this.props.posts ? this.props.threads : loremipsumposts;

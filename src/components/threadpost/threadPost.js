@@ -6,6 +6,7 @@ import {Button} from "primereact/button";
 import history from "../../history";
 import {ConfirmPopup, confirmPopup} from 'primereact/confirmpopup';
 import {Toast} from 'primereact/toast';
+import {Link} from "react-router-dom";
 
 export default class ThreadPost extends Component {
 
@@ -23,7 +24,8 @@ export default class ThreadPost extends Component {
     render() {
         const header = (
             <div className="p-grid p-jc-between ">
-                <div className="p-d-flex p-ml-4 p-mr-0">
+
+                <Link className="link p-d-flex p-ml-4 p-mr-0" to="/userProfileOther">
                     <Avatar
                         image={this.props.avatar}
                         size="large"
@@ -36,7 +38,8 @@ export default class ThreadPost extends Component {
                         <h3 className="p-m-0">{this.props.username}</h3>
                         <p className="p-m-0">{this.props.date}</p>
                     </div>
-                </div>
+                </Link>
+
 
                 <h2 className="p-my-auto">{this.props.threadname}</h2>
                 <div className="Upvote p-grid p-jc-end p-mr-4 p-mt-3">
