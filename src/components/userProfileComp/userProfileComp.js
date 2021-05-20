@@ -19,7 +19,7 @@ export default class UserProfileComp extends Component {
       nickname: "Lõdvik",
       desc: "lore ipsum...",
       educ: "Random inc Highschool",
-      country: { name: "Spain", code: "ES" },
+      country: { name: "Colombia", code: "CO" },
       gender: { name: "Male" },
       age: 25,
       regDate: new Date("December 17, 2020 03:24:00"),
@@ -32,15 +32,17 @@ export default class UserProfileComp extends Component {
       { name: "Australia", code: "AU" },
       { name: "Brazil", code: "BR" },
       { name: "China", code: "CN" },
+      { name: "Colombia", code: "CO" },
       { name: "Egypt", code: "EG" },
+      { name: "Estonia", code: "EE" },
       { name: "France", code: "FR" },
       { name: "Germany", code: "DE" },
       { name: "India", code: "IN" },
       { name: "Japan", code: "JP" },
+      { name: "Kazakhstan", code: "KZ" },
       { name: "Spain", code: "ES" },
       { name: "United States", code: "US" },
-      { name: "Kazakhstan", code: "KZ" },
-      { name: "Estonia", code: "EE" },
+
     ];
   }
 
