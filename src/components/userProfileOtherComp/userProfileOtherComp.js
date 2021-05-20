@@ -62,10 +62,10 @@ export default class UserProfileOtherComp extends Component {
 
 
                             <h5>Country</h5>
-                            <div className="country-item">
+                            <div className="country-item p-d-flex p-ai-center">
                                 <img alt={this.state.country.name} src={`https://www.countryflags.io/${this.state.country.code}/flat/64.png`}
                                      onError={(e) => e.target.src = 'https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'}
-                                     className={`flag flag-${this.state.country.code.toLowerCase()}`}/>
+                                     className={`p-mr-2 flag flag-${this.state.country.code.toLowerCase()}`}/>
                                 <div>{this.state.country.name}</div>
                             </div>
 
