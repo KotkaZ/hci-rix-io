@@ -1,15 +1,19 @@
 .mainThread {
-  background-color: var(--surface-c) !important;
+    background-color: var(--surface-c) !important;
 }
 
 .post {
-  background-color: var(--surface-a) !important;
+    background-color: var(--surface-a) !important;
 }
 
 .post .p-card-content {
-  background-color: var(--surface-a) !important;
+    background-color: var(--surface-a) !important;
 }
 
 .mainThread .p-card-content {
-  background-color: var(--surface-c) !important;
+    background-color: var(--surface-c) !important;
+}
+
+.p-confirm-popup-footer {
+    display: none;
 }

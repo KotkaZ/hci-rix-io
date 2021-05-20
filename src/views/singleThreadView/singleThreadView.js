@@ -5,6 +5,8 @@ import ThreadPost from "../../components/threadpost/threadPost";
 import {Dropdown} from "primereact/dropdown";
 import {Button} from "primereact/button";
 import history from "../../history";
+import { ConfirmPopup, confirmPopup } from 'primereact/confirmpopup';
+import { Toast } from 'primereact/toast';
 
 export default class SingleThreadView extends Component {
     constructor(props) {
@@ -15,9 +17,7 @@ export default class SingleThreadView extends Component {
 
     }
 
-    share(site) {
-        window.open(site, "_blank")
-    }
+
 
     render() {
         const data = this.props.posts ? this.props.threads : loremipsumposts;
@@ -60,30 +60,8 @@ export default class SingleThreadView extends Component {
             </span>
 
                     </div>
-                    <Button className="facebook p-p-0" onClick={() => {
-                        this.share("https://www.facebook.com/")
-                    }}>
-                        <i className="pi pi-facebook p-px-2"/>
-                        <span className="p-px-3">Facebook</span>
-                    </Button>
-                    <Button className="twitter p-p-0" onClick={() => {
-                        this.share("https://twitter.com/home")
-                    }}>
-                        <i className="pi pi-twitter p-px-2"/>
-                        <span className="p-px-3">Twitter</span>
-                    </Button>
-                    <Button className="slack p-p-0" onClick={() => {
-                        this.share("https://slack.com/intl/en-ee/")
-                    }}>
-                        <i className="pi pi-slack p-px-2"/>
-                        <span className="p-px-3">Slack</span>
-                    </Button>
-                    <Button className="discord p-p-0" onClick={() => {
-                        this.share("https://discord.com/brand-new")
-                    }}>
-                        <i className="pi pi-discord p-px-2"/>
-                        <span className="p-px-3">Discord</span>
-                    </Button>
+
+
 
 
                     <Button
